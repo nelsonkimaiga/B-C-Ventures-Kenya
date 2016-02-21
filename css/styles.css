@@ -346,3 +346,7 @@ p {
     border-radius: 50%;
     border: 0;
 }
+
+.img-circle {
+    border-radius: 50%;
+}
