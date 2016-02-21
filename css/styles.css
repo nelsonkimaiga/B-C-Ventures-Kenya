@@ -195,12 +195,12 @@ p {
     border: 5px solid #fff;
 }
 
-.social.gray a:hover {
+.social.blue a:hover {
     background-color: #7afbc4;
     border: 5px solid #7afbc4;
 }
 
-.social.gray{
+.social.blue{
   margin-top: 20px;
 }
 
@@ -238,7 +238,6 @@ p {
     z-index: 400;
 }
 .static-bg {
-    background: #00196F url(../images/home-mob-bg.jpg) no-repeat center center;
     background-size: contain;
 }
 
@@ -370,4 +369,8 @@ p {
 /*foundation icons*/
 .icons{
  font-size:58px;
+}
+
+#designs{
+    text-align: center;
 }
