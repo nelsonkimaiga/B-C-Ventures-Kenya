@@ -334,6 +334,11 @@ p {
 .about-container {
     background: #2a2d38;
     min-height: 600px;
+    text-align: left;
+}
+
+#about-heading {
+    text-align: center;
 }
 
 .banner {
@@ -356,4 +361,13 @@ p {
     display: block;
     width: 200px;
     height: 201px;
+}
+
+.img-rounded {
+  border-radius: 500px;
+}
+
+/*foundation icons*/
+.icons{
+ font-size:58px;
 }
