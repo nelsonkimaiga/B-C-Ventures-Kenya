@@ -8,16 +8,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>B&C Ventures|Home</title>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/foundation.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/animate.css">
-
+<!--foundation icons-->
+<link rel="stylesheet" type="text/css" href="css/foundation-icons.css">
 <!-- Fancy box CSS -->
 <link href="css/jquery.fancybox.css" rel="stylesheet">
-<!-- font-awsome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <!--fonts-->
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!--foundation icons cdn-->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
 <!-- form validation -->
         <script type="text/javascript">
             function validateForm(){
@@ -92,11 +93,11 @@
     </div>
     <!-- slider -->
     <div class="col-md-12">
-        <marquee behavior="alternate"  direction="left" align="center" scrollamount="2.5">
-            <img src="images/7.jpg" width="300" height="200"/>
-            <img src="images/1.jpg" width="300" height="200"/>
-            <img src="images/2.jpg" width="300" height="200"/>
-            <img src="images/8.jpg" Width="300" height="200"/>
+        <marquee behavior="alternate"  direction="left" align="center" scrollamount="2.0">
+            <img src="images/7.jpg" width="300" height="200" class="img-rounded"/>
+            <img src="images/1.jpg" width="300" height="200" class="img-rounded"/>
+            <img src="images/2.jpg" width="300" height="200" class="img-rounded"/>
+            <img src="images/8.jpg" Width="300" height="200" class="img-rounded"/>
         </marquee>
     </div>
 <!-- about us -->
@@ -186,7 +187,7 @@
                                 <textarea class="form-control validate" type="textarea" name="message" rows="5" placeholder="Message"></textarea>
                             </fieldset>
                         </div>
-                        <button type="submit" value="SEND" class="btn btn-primary">Talk To us</button>
+                        <button type="submit" value="SEND" class="btn btn-primary" id="contact-button">Talk To us</button>
                     </form>
                 </div>
                 </div>
@@ -218,10 +219,9 @@
 </div>
 
 <!-- Javascript files -->
-    <script src="js/bootstrap.js"></script>
-    <scrpt src="js/jquery-1.11.3.js"></script>
-    <script src="js/jquery.min.js"> </script>
-    <!--<script src="js/waypoint.js"></script>-->
+    <script src="js/foundation.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/waypoint.js"></script>
     <script src="js/mobile-detect.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.min.js"></script> 
