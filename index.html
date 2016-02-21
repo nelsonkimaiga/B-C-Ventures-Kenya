@@ -54,7 +54,7 @@
 <!-- navbar --> <!-- smooth scroll -->
     <div class="masthead clearfix">
         <div class="container-fluid">
-            <h3 class="masthead-brand"><a href="#home"><img src="images/logo.jpg" class="img-circle"></a></h3>
+            <h3 class="masthead-brand"><a href="#home"><img src="images/logo.jpg" class="img-logo"></a></h3>
             <nav>
                 <ul class="nav masthead-nav">
                     <li class="active"><a href="#home">Home</a></li>
@@ -87,7 +87,7 @@
 
         </div>
         <div class="cover-button delay-08 transparent">
-            <div><a href="Projects.html" class="btn btn-success">See our projects</a></div>
+            <div><a href="Projects.html" class="button success">See our projects</a></div>
             <span class="glyphicon glyphicon-menu-down text-primary animated infinite fadeIn "></span>
         </div>
     </div>
@@ -187,7 +187,7 @@
                                 <textarea class="form-control validate" type="textarea" name="message" rows="5" placeholder="Message"></textarea>
                             </fieldset>
                         </div>
-                        <button type="submit" value="SEND" class="btn btn-primary" id="contact-button">Talk To us</button>
+                        <button type="submit" value="SEND" class="button primary" id="contact-button">Talk To us</button>
                     </form>
                 </div>
                 </div>
@@ -520,7 +520,7 @@
     $('.masthead').removeClass("sticky");
     }
     });
-    $(".masthead a, a.btn").click(function(event){
+    $(".masthead a, a.button").click(function(event){
            event.preventDefault();
         $('html,body').animate({scrollTop:$(this.hash).offset().top-50}, 500);
       
@@ -601,7 +601,7 @@
    
     $('#about').waypoint(function() {
         $(this).find(' .section-title, .desc ').addClass('animated fadeInUp');
-        $(this).find('.btn').addClass('animated zoomIn');
+        $(this).find('.button').addClass('animated zoomIn');
     }, { offset: function() {
         return $(window).height()-2;
       }});

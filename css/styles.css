@@ -12,14 +12,14 @@ h3,
 h4,
 h5,
 h6,
-.btn,
+.button,
 .section-title,
 .cover-heading {
     text-transform: uppercase;
     font-family: 'Raleway', serif;
 }
 
-.btn {
+.button {
     padding-right: 25px;
     padding-left: 25px;
     transition: all .5s ease-in;
@@ -333,4 +333,9 @@ p {
     background-size: cover;
     min-height: 350px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .1) inset;
+}
+
+.img-logo{
+    border-radius: 50%;
+    border: 0;
 }
