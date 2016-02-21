@@ -32,6 +32,7 @@ h6,
 p {
     font-size: 16px;
 }
+
 /*
  * Header
  */
@@ -332,4 +333,4 @@ p {
     background-size: cover;
     min-height: 350px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .1) inset;
-}s
+}
