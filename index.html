@@ -4,684 +4,679 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Real Estate">
-<!-- for-mobile-view -->
+        <!-- for-mobile-view -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>B&C Ventures|Home</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="css/foundation.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <!--foundation icons-->
+        <!--foundation icons-->
         <link rel="stylesheet" type="text/css" href="css/foundation-icons.css">
-    <!-- Fancy box CSS -->
+        <!-- Fancy box CSS -->
         <link href="css/jquery.fancybox.css" rel="stylesheet">
-    <!--fonts-->
+        <!--fonts-->
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <!--foundation icons cdn-->
+        <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
-    <!-- form validation -->
+        <!-- form validation -->
         <script type="text/javascript">
-            function validateForm(){
+            function validateForm() {
                 var x = document.forms["contactForm"]["name"].value;
                 var y = document.forms["contactForm"]["phone"].value;
                 var z = document.forms["contactForm"]["email"].value;
                 var m = document.forms["contactForm"]["message"].value;
-                
+
                 if (x == null || x == "") {
                     alert("Name must be filled out");
                     return false;
                 }
-                
-                if (y==null || y == "" || (y.value < 10) || (isNaN(y.value))){
+
+                if (y == null || y == "" || (y.value < 10) || (isNaN(y.value))) {
                     alert("number must be filled out");
                     return false;
                 }
-                
-                if (z==null || z == ""){
+
+                if (z == null || z == "") {
                     alert("email must be filled out");
                     return false;
                 }
-                
-                if (m==null || m == ""){
+
+                if (m == null || m == "") {
                     alert("message must be filled out");
                     return false;
                 }
                 return true;
             }
         </script>
-</head>
-<body>
-<!-- navbar --> <!-- smooth scroll -->
-    <div class="masthead clearfix">
-        <div class="container-fluid">
-            <h3 class="masthead-brand"><a href="#home"><img src="images/logo.jpg" class="img-logo"></a></h3>
-            <nav>
-                <ul class="nav masthead-nav">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="login.html" rel="nofollow" target="_blank">Login</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#designs">Interior Designs</a></li>
-                    <li><a href="#services">Our Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    </head>
+    <body>
+        <!-- navbar --> <!-- smooth scroll -->
+        <div class="masthead clearfix">
+            <div class="container-fluid">
+                <h3 class="masthead-brand"><a href="#home"><img src="images/logo.jpg" class="img-logo"></a></h3>
+                <nav>
+                    <ul class="nav masthead-nav">
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#designs">Interior Designs</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-<!-- cover container -->
-    <div class="cover-container" id="home">
-        <div id="canvasAnimation"></div>
-        <div class="cover-wrapper">
-            <div class="cover-wrapper-inner transparent">
-                <div class="container-fluid cover ">
-                    <p class="cover-hello ">Hello, We're</p>
-                    <h1 class="cover-heading delay-02">Briclin Kenya</h1>
-                    <h2 class="cover-designation delay-04"><span></span></h2>
-                    <div class="social blue">
-                        <span class="icons"><a title="Linkedln" href="https://www.linkedin.com/in/" rel="nofollow" target="_blank"><i class="fi-social-linkedin"></i></a></span>
-                        <span class="icons"><a title="Facebook" href="https://www.facebook.com/" rel="nofollow" target="_blank"><i class="fi-social-facebook"></i></a></span>
-                        <span class="icons"><a title="Twitter" href="https://www.twitter.com/" rel="nofollow" target="_blank"><i class="fi-social-twitter"></i></a></span>
+        <!-- cover container -->
+        <div class="cover-container" id="home">
+            <div id="canvasAnimation"></div>
+            <div class="cover-wrapper">
+                <div class="cover-wrapper-inner transparent">
+                    <div class="container-fluid cover ">
+                        <p class="cover-hello ">Hello, We're</p>
+                        <h1 class="cover-heading delay-02">Briclin Kenya</h1>
+                        <h2 class="cover-designation delay-04"><span></span></h2>
+                        <div class="social blue">
+                            <span class="icons"><a title="Linkedln" href="https://www.linkedin.com/in/" rel="nofollow" target="_blank"><i class="fi-social-linkedin"></i></a></span>
+                            <span class="icons"><a title="Facebook" href="https://www.facebook.com/" rel="nofollow" target="_blank"><i class="fi-social-facebook"></i></a></span>
+                            <span class="icons"><a title="Twitter" href="https://www.twitter.com/" rel="nofollow" target="_blank"><i class="fi-social-twitter"></i></a></span>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
-
-        </div>
-        <div class="cover-button delay-08 transparent">
-            <div><a href="Projects.html" class="button success">See our projects</a></div>
-            <span class="glyphicon glyphicon-menu-down text-primary animated infinite fadeIn "></span>
-        </div>
-    </div>
-    <!-- slider -->
-    <div class="col-md-12">
-        <marquee behavior="alternate"  direction="left" align="center" scrollamount="2.0">
-            <img src="images/7.jpg" width="300" height="200" class="img-rounded"/>
-            <img src="images/1.jpg" width="300" height="200" class="img-rounded"/>
-            <img src="images/2.jpg" width="300" height="200" class="img-rounded"/>
-            <img src="images/8.jpg" Width="300" height="200" class="img-rounded"/>
-        </marquee>
-    </div>
-<!-- about us -->
-    <div id="about" class="about-container">
-        <div class="banner">
-            <div class="container">
-                <h3 class="section-title text-primary delay-02" id="about-heading">About us</h3>
-                <p class="desc delay-04">B&C ventures is a Kenyan based, international construction service company and is a leading builder in diverse and numerous market segments. We have earned recognition for undertaking large, complex projects, fostering innovation, embracing emerging technologies and making a difference for their clients, employees and community. We offer client the accessibility and support of a local firm with the stability and resource of a local firm with the stability and resource of a multi national organization.
-</p>
+            <div class="cover-button delay-08 transparent">
+                <div class="row">
+                    <a href="Projects.html" class="button success" onclick="parent.location='Projects.html'">See our projects</a>
+                    <a href="login.html" class="button secondary" onclick="parent.location='login.html'">Login</a>
+                </div>
+                <span class="glyphicon glyphicon-menu-down text-primary animated infinite fadeIn "></span>
             </div>
         </div>
-    </div>
-<!-- Interior Designs -->
-    <div id="designs" class="about-container">
-        <div class="banner">
-            <div class="container">
-                <h3 class="section-title text-primary delay-02">Interior Designs</h3>
-                <p class="desc delay-04">We also deal in the supply of household products.
-</p>
-    <img src="images/th(6).jpg" class="img-rounded" width=500 height=300/>
+        <!-- slider -->
+        <div class="col-md-12">
+            <marquee behavior="alternate"  direction="left" align="center" scrollamount="2.0">
+                <img src="images/7.jpg" width="300" height="200" class="img-rounded"/>
+                <img src="images/1.jpg" width="300" height="200" class="img-rounded"/>
+                <img src="images/2.jpg" width="300" height="200" class="img-rounded"/>
+                <img src="images/8.jpg" Width="300" height="200" class="img-rounded"/>
+            </marquee>
+        </div>
+        <!-- about us -->
+        <div id="about" class="about-container">
+            <div class="banner">
+                <div class="container">
+                    <h3 class="section-title text-primary delay-02" id="about-heading">About us</h3>
+                    <p class="desc delay-04">B&C ventures is a Kenyan based, international construction service company and is a leading builder in diverse and numerous market segments. We have earned recognition for undertaking large, complex projects, fostering innovation, embracing emerging technologies and making a difference for their clients, employees and community. We offer client the accessibility and support of a local firm with the stability and resource of a local firm with the stability and resource of a multi national organization.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-<!-- services -->
-<div id="services" class="container">
-    <h2>Our Services</h2>
-    <div class="row">
-        <div class="small-12 medium-3 large-3 columns">
-            <span><h5>Interior designs</h5></span>
-            <img src="images/9.jpg" class="img-circle">
+        <!-- Interior Designs -->
+        <div id="designs" class="about-container">
+            <div class="banner">
+                <div class="container">
+                    <h3 class="section-title text-primary delay-02">Interior Designs</h3>
+                    <p class="desc delay-04">We also deal in the supply of household products.
+                    </p>
+                    <img src="images/th(6).jpg" class="img-rounded" width=500 height=300/>
+                </div>
+            </div>
         </div>
-        <div class="small-12 medium-3 large-3 columns">
-            <span><h5>Construction</h5></span>
-            <img src="images/6.jpg" class="img-circle">
+        <!-- services -->
+        <div id="services" class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="small-12 medium-3 large-3 columns">
+                    <span><h5>Interior designs</h5></span>
+                    <img src="images/9.jpg" class="img-circle">
+                </div>
+                <div class="small-12 medium-3 large-3 columns">
+                    <span><h5>Construction</h5></span>
+                    <img src="images/6.jpg" class="img-circle">
+                </div>
+                <div class="small-12 medium-3 large-3 columns">
+                    <span><h5>Property Management</h5></span>
+                    <img src="images/4.jpg" class="img-circle">
+                </div>
+                <div class="small-12 medium-3 large-3 columns">
+                    <span><h5>Landscaping</h5></span>
+                    <img src="images/10.jpg" class="img-circle">
+                </div>
+            </div>
         </div>
-        <div class="small-12 medium-3 large-3 columns">
-            <span><h5>Property Management</h5></span>
-            <img src="images/4.jpg" class="img-circle">
-        </div>
-        <div class="small-12 medium-3 large-3 columns">
-            <span><h5>Landscaping</h5></span>
-            <img src="images/10.jpg" class="img-circle">
-        </div>
-    </div>
-</div>
-<br>
-<!--contact section-->
-<div class="contact-container" id="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-wrapper-inner">
-                    <h3 class="section-title text-primary">Let's keep in touch</h3>
+        <br>
+        <!--contact section-->
+        <div class="contact-container" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-wrapper-inner">
+                        <h3 class="section-title text-primary">Let's keep in touch</h3>
                         <p class="desc delay-02">
                             <br>At B&C ventures we ensure quality with our clients. We encourage you to interact with us via our contact form</br>
                             <br>Nairobi, Kenya </br>
                             <br>Mobile: </br>
                         </p>
-                    <p class="desc delay-02"><b>We are social</p></b>
+                        <p class="desc delay-02"><b>We are social</p></b>
 
-                <div class="social blue">
-                    <span class="icons"><a title="Linkedln" href="https://www.linkedin.com/in/" rel="nofollow" target="_blank"><i class="fi-social-linkedin"></i></a></span>
-                    <span class="icons"><a title="Facebook" href="https://www.facebook.com/" rel="nofollow" target="_blank"><i class="fi-social-facebook"></i></a></span>
-                    <span class="icons"><a title="Twitter" href="https://www.twitter.com/" rel="nofollow" target="_blank"><i class="fi-social-twitter"></i></a></span>
-                </div>
-                <div class="contact-form">
-                    <form  action="//formspree.io/" method="POST" onsubmit="return validateForm()" name="contactForm">
-                        <div class="small-12 medium-12 large-12 columns">
-                            <fieldset>
-                                <label>Full Names</label>
-                                <input id="first_name" type="text" name="name" class="validate">
-                            </fieldset>
+                        <div class="social blue">
+                            <span class="icons"><a title="Linkedln" href="https://www.linkedin.com/in/" rel="nofollow" target="_blank"><i class="fi-social-linkedin"></i></a></span>
+                            <span class="icons"><a title="Facebook" href="https://www.facebook.com/" rel="nofollow" target="_blank"><i class="fi-social-facebook"></i></a></span>
+                            <span class="icons"><a title="Twitter" href="https://www.twitter.com/" rel="nofollow" target="_blank"><i class="fi-social-twitter"></i></a></span>
                         </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                            <fieldset>
-                                <label>Phone Number</label>
-                                <input type="text" class=" validate" id="phone" name="phone" placeholder="Phone">
-                            </fieldset>
+                        <div class="contact-form">
+                            <form  action="//formspree.io/" method="POST" onsubmit="return validateForm()" name="contactForm">
+                                <div class="small-12 medium-12 large-12 columns">
+                                    <fieldset>
+                                        <label>Full Names</label>
+                                        <input id="first_name" type="text" name="name" class="validate">
+                                    </fieldset>
+                                </div>
+                                <div class="small-12 medium-6 large-6 columns">
+                                    <fieldset>
+                                        <label>Phone Number</label>
+                                        <input type="text" class=" validate" id="phone" name="phone" placeholder="Phone">
+                                    </fieldset>
+                                </div>
+                                <div class="small-12 medium-6 large-6 columns">
+                                    <fieldset>
+                                        <label>Email Address</label>
+                                        <input type="email" class="validate" id="email" name="email" placeholder="Email">
+                                    </fieldset>
+                                </div>
+                                <div class="small-12 medium-12 large-12 columns">
+                                    <fieldset>
+                                        <label>Your Message</label>
+                                        <textarea class="validate" type="textarea" name="message" rows="5" placeholder="Message"></textarea>
+                                    </fieldset>
+                                </div>
+                                <button type="submit" value="SEND" class="button primary" id="contact-button">Talk To us</button>
+                            </form>
                         </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                            <fieldset>
-                                <label>Email Address</label>
-                                <input type="email" class="validate" id="email" name="email" placeholder="Email">
-                            </fieldset>
-                        </div>
-                        <div class="small-12 medium-12 large-12 columns">
-                            <fieldset>
-                                <label>Your Message</label>
-                                <textarea class="validate" type="textarea" name="message" rows="5" placeholder="Message"></textarea>
-                            </fieldset>
-                        </div>
-                        <button type="submit" value="SEND" class="button primary" id="contact-button">Talk To us</button>
-                    </form>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-<!-- footer -->
-<div class="footer">
-    <div class="copy">
-        <div class="container">
-            <p>All Rights Reserved |<a href="index.html">Briclin Kenya</a></p>
+        <!-- footer -->
+        <div class="footer">
+            <div class="copy">
+                <div class="container">
+                    <p>All Rights Reserved |<a href="index.html">Briclin Kenya</a></p>
+                </div>
+
+                <!-- curent date and year to appear on footer-->
+                &copy; B&C Ventures <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
+
+            <!--gooogle analytics-->
+            <script type="text/javascript">
+                $(document).ready(function () {
+
+                    $().UItoTop({easingType: 'easeOutQuart'});
+
+                });
+            </script>
+            <a href="#home" id="toTop" style="display: block;"><span id="toTopHover"></span><span id="toTopHover"></span> <span id="toTopHover" style="opacity: 1;"> </span></a>
         </div>
 
-<!-- curent date and year to appear on footer-->
-&copy; B&C Ventures <script type="text/javascript">
-    document.write(new Date().getFullYear());
-</script>
-    </div>
+        <!-- Javascript files -->
+        <script src="js/foundation.js"></script>
+        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/waypoint.js"></script>
+        <script src="js/mobile-detect.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script type="text/javascript" src="js/jquery.isotope.min.js"></script> 
+        <script type="text/javascript" src="js/isotope.pkgd.js"></script> 
+        <script src="js/three.js"></script>
+        <script src="js/FBOUtils.js"></script>
+        <script src="js/typed.min.js"></script>
 
-<!--gooogle analytics-->
-<script type="text/javascript">
-            $(document).ready(function() {
+        <script id="texture_vertex_simulation_shader" type="x-shader/x-vertex">
 
-              $().UItoTop({ easingType: 'easeOutQuart' });
+            varying vec2 vUv;
 
-            });
-          </script>
-        <a href="#home" id="toTop" style="display: block;"><span id="toTopHover"></span><span id="toTopHover"></span> <span id="toTopHover" style="opacity: 1;"> </span></a>
-</div>
+            void main() {
 
-<!-- Javascript files -->
-    <script src="js/foundation.js"></script>
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/waypoint.js"></script>
-    <script src="js/mobile-detect.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.min.js"></script> 
-    <script type="text/javascript" src="js/isotope.pkgd.js"></script> 
-    <script src="js/three.js"></script>
-    <script src="js/FBOUtils.js"></script>
-    <script src="js/typed.min.js"></script>
+            vUv = vec2(uv.x, 1.0 - uv.y);
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 
-<script id="texture_vertex_simulation_shader" type="x-shader/x-vertex">
-        
-      varying vec2 vUv;
-
-      void main() {
-
-        vUv = vec2(uv.x, 1.0 - uv.y);
-        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-
-      }
-
-    </script>
-    <script id="texture_fragment_simulation_shader" type="x-shader/x-fragment">
-        
-      // simulation
-      varying vec2 vUv;
-      
-      uniform vec3 origin;
-      uniform sampler2D tPositions;
-      
-      uniform float timer;
-
-
-      float rand(vec2 co){
-          return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
-      }
-    
-      void main() {
-
-
-        vec3 pos = texture2D( tPositions, vUv ).xyz;
-
-        if ( rand( vUv + timer ) > 0.99 ) {
-
-          pos = origin;
-
-          vec3 random = vec3( rand( vUv + 1.0 ) - 1.0, rand( vUv + 2.0 ) - 1.0, rand( vUv + 3.0 ) - 1.0 );
-          pos += normalize( random ) * rand( vUv + 1.0 );
-
-        } else {
-
-          float x = pos.x + timer;
-          float y = pos.y;
-          float z = pos.z;
-
-          pos.x += sin( y * 3.3 ) * cos( z * 10.3 ) * 0.005;
-          pos.y += sin( x * 3.5 ) * cos( z * 10.5 ) * 0.005;
-          pos.z += sin( x * 3.7 ) * cos( y * 10.7 ) * 0.005;
-
-        }
-
-
-        // Write new position out
-        gl_FragColor = vec4(pos, 1.0);
-
-
-      }
-
-
-    </script>
-
-    <!-- zz85 - end simulations -->
-
-    <script id="vs-particles" type="x-shader/x-vertex">
-
-      uniform sampler2D map;
-
-      uniform float width;
-      uniform float height;
-
-      uniform float pointSize;
-
-      varying vec2 vUv;
-      varying vec4 vPosition;
-      varying vec4 vColor;
-
-      void main() {
-
-        vec2 uv = position.xy + vec2( 0.5 / width, 0.5 / height );
-        vec3 color = texture2D( map, uv ).rgb * 200.0 - 100.0;
-
-        gl_PointSize = pointSize;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4( color, 1.0 );
-
-      }
-
-    </script>
-
-    <script id="fs-particles" type="x-shader/x-fragment">
-
-      uniform vec4 pointColor;
-
-      void main() {
-
-        gl_FragColor = pointColor;
-
-      }
-
-    </script>
-
-    <script>
-       
-      var container;
-
-      var scene, camera, light, renderer;
-      var geometry, cube, mesh, material;
-
-      var data, texture, points;
-
-      var controls;
-
-      var fboParticles, rtTexturePos, rtTexturePos2, simulationShader;
-
-      var planeMat, planeGeo, plane;
-            
-            var isMobile = $.browser.mobile;
-            
-            if(!isMobile){
-                init();
-                animate();
-            } else {
-                $('#home').addClass('static-bg');
             }
 
-      function init() {
+        </script>
+        <script id="texture_fragment_simulation_shader" type="x-shader/x-fragment">
 
-        container = document.createElement( 'div' );
-        document.body.appendChild( container );
-                $('#canvasAnimation').append( container );
+            // simulation
+            varying vec2 vUv;
 
-        renderer = new THREE.WebGLRenderer();
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        container.appendChild( renderer.domElement );
+            uniform vec3 origin;
+            uniform sampler2D tPositions;
 
-        scene = new THREE.Scene();
-
-        camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
-        scene.add( camera );
-
-        controls = new THREE.OrbitControls2( camera );
-        controls.radius = 400;
-        controls.speed = 2;
-
-        //
-
-        var width = 900, height = 900;
-
-        if ( ! renderer.context.getExtension( 'OES_texture_float' ) ) {
-
-          console.log( 'OES_texture_float is not :(' );
-
-        }
-
-        // Start Creation of DataTexture
-        // Could it be simplified with THREE.FBOUtils.createTextureFromData(textureWidth, textureWidth, data); ?
-
-        data = new Float32Array( width * height * 3 );
-
-        texture = new THREE.DataTexture( data, width, height, THREE.RGBFormat, THREE.FloatType );
-        texture.minFilter = THREE.NearestFilter;
-        texture.magFilter = THREE.NearestFilter;
-        texture.needsUpdate = true;
+            uniform float timer;
 
 
-        // zz85 - fbo init
+            float rand(vec2 co){
+            return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
+            }
 
-        rtTexturePos = new THREE.WebGLRenderTarget(width, height, {
-          wrapS:THREE.RepeatWrapping,
-          wrapT:THREE.RepeatWrapping,
-          minFilter: THREE.NearestFilter,
-          magFilter: THREE.NearestFilter,
-          format: THREE.RGBFormat,
-          type:THREE.FloatType,
-          stencilBuffer: false
-        });
-
-        rtTexturePos2 = rtTexturePos.clone();
-
-        simulationShader = new THREE.ShaderMaterial({
-
-          uniforms: {
-            tPositions: { type: "t", value: texture },
-            origin: { type: "v3", value: new THREE.Vector3() },
-            timer: { type: "f", value: 0 }
-          },
-
-          vertexShader: document.getElementById('texture_vertex_simulation_shader').textContent,
-          fragmentShader:  document.getElementById('texture_fragment_simulation_shader').textContent
-
-        });
-
-        fboParticles = new THREE.FBOUtils( width, renderer, simulationShader );
-        fboParticles.renderToTexture(rtTexturePos, rtTexturePos2);
-
-        fboParticles.in = rtTexturePos;
-        fboParticles.out = rtTexturePos2;
+            void main() {
 
 
-        geometry = new THREE.Geometry();
+            vec3 pos = texture2D( tPositions, vUv ).xyz;
 
-        for ( var i = 0, l = width * height; i < l; i ++ ) {
+            if ( rand( vUv + timer ) > 0.99 ) {
 
-          var vertex = new THREE.Vector3();
-          vertex.x = ( i % width ) / width ;
-          vertex.y = Math.floor( i / width ) / height;
-          geometry.vertices.push( vertex );
+            pos = origin;
 
-        }
+            vec3 random = vec3( rand( vUv + 1.0 ) - 1.0, rand( vUv + 2.0 ) - 1.0, rand( vUv + 3.0 ) - 1.0 );
+            pos += normalize( random ) * rand( vUv + 1.0 );
 
-        material = new THREE.ShaderMaterial( {
+            } else {
 
-          uniforms: {
+            float x = pos.x + timer;
+            float y = pos.y;
+            float z = pos.z;
 
-            "map": { type: "t", value: rtTexturePos },
-            "width": { type: "f", value: width },
-            "height": { type: "f", value: height },
+            pos.x += sin( y * 3.3 ) * cos( z * 10.3 ) * 0.005;
+            pos.y += sin( x * 3.5 ) * cos( z * 10.5 ) * 0.005;
+            pos.z += sin( x * 3.7 ) * cos( y * 10.7 ) * 0.005;
 
-            "pointColor": { type: "v4", value: new THREE.Vector4(0, 0.24, 0.2, 0.07) },
-            "pointSize": { type: "f", value: 1 }
+            }
 
-          },
-          vertexShader: document.getElementById( 'vs-particles' ).textContent,
-          fragmentShader: document.getElementById( 'fs-particles' ).textContent,
-          blending: THREE.AdditiveBlending,
-          depthWrite: false,
-          depthTest: false,
-          transparent: true
 
-        } );
+            // Write new position out
+            gl_FragColor = vec4(pos, 1.0);
 
-        mesh = new THREE.ParticleSystem( geometry, material );
-        scene.add( mesh );
 
-//        var gui = new dat.GUI();
-//        gui.add( material.uniforms.pointColor.value, 'x', 0.0, 1.0 ).name( 'red' );
-//        gui.add( material.uniforms.pointColor.value, 'y', 0.0, 1.0 ).name( 'green' );
-//        gui.add( material.uniforms.pointColor.value, 'z', 0.0, 1.0 ).name( 'blue' );
-//        gui.add( material.uniforms.pointColor.value, 'w', 0.0, 1.0 ).name( 'alpha' );
-//        gui.add( material.uniforms.pointSize, 'value', 0.0, 10.0 ).name( 'size' );
-//        gui.add( controls, 'enabled' ).name( 'auto move' );
+            }
 
-        scene.add( new THREE.Mesh( new THREE.CubeGeometry( 500, 500, 500 ), new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true, opacity: 0, transparent: true } ) ) );
 
-      }
+        </script>
 
-      function animate() {
+        <!-- zz85 - end simulations -->
 
-        requestAnimationFrame( animate );
-        render();
+        <script id="vs-particles" type="x-shader/x-vertex">
 
-      }
+            uniform sampler2D map;
 
-      var timer = 0;
+            uniform float width;
+            uniform float height;
 
-      function render() {
+            uniform float pointSize;
 
-        timer += 0.005;
+            varying vec2 vUv;
+            varying vec4 vPosition;
+            varying vec4 vColor;
 
-        simulationShader.uniforms.timer.value = timer;
-        simulationShader.uniforms.origin.value.x = Math.sin( timer * 2.3 ) * 0.5 + 0.5;
-        simulationShader.uniforms.origin.value.y = Math.cos( timer * 2.5 ) * 0.5 + 0.5;
-        simulationShader.uniforms.origin.value.z = Math.sin( timer * 2.7 ) * 0.5 + 0.5;
+            void main() {
 
-        // swap
-        var tmp = fboParticles.in;
-        fboParticles.in = fboParticles.out;
-        fboParticles.out = tmp;
+            vec2 uv = position.xy + vec2( 0.5 / width, 0.5 / height );
+            vec3 color = texture2D( map, uv ).rgb * 200.0 - 100.0;
 
-        simulationShader.uniforms.tPositions.value = fboParticles.in;
-        fboParticles.simulate(fboParticles.out);
-        material.uniforms.map.value = fboParticles.out;
+            gl_PointSize = pointSize;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( color, 1.0 );
 
-        controls.update();
+            }
 
-        renderer.render( scene, camera );
+        </script>
 
-      }
-        
+        <script id="fs-particles" type="x-shader/x-fragment">
 
-    </script>
-<!-- window scroll -->
-<script>
-    $(window).scroll(function() {
-    if ($(this).scrollTop() > 1){  
-    $('.masthead').addClass("sticky");
-    }
-    else{
-    $('.masthead').removeClass("sticky");
-    }
-    });
-    $(".masthead a, a.button").click(function(event){
-           event.preventDefault();
-        $('html,body').animate({scrollTop:$(this.hash).offset().top-50}, 500);
-      
-      
-    });
-    $().ready(function(){
-        $('#home').find('.cover-hello, .cover-heading, .cover-designation, .cover-button').addClass('animated bounceInUp');
-        $('#home').find('.social a').addClass('animated zoomIn');
-        $('#home').find('.cover-wrapper-inner, .cover-button').removeClass('transparent');
-        
-        
-        $container = $('.works_list ul');
-        $container.isotope({
-          onLayout: function() {
-           $.waypoints('refresh');
-          }
-        });
-        var e = $(".isotope");
-        e.imagesLoaded( function() {
-        e.isotope({
-            itemSelector: ".element-item",
-            layoutMode: "fitRows",
-            
-        });
-      });
-        var t = {};
-        $("#filters").on("click", "button", function () {
-            var n = $(this).attr("data-filter");
-            $(this).addClass("active");
-            $(this).siblings().removeClass("active");
-            n = t[n] || n;
-            e.isotope({
-                filter: n
-            })
-        })
-        
-        if(isMobile){
-        $(".item").click(function(){
-        toggleDetail(this);
-        
-      });
-      }
-      else{
-      $(".item").hover(function(){
-        toggleDetail(this);
-        
-      });
-        }
-        
-        widthcalc();
-        $(window).resize(function(){
-            widthcalc();
-             $.waypoints('refresh');
-        });
-        
-        $(".cover-designation span").typed({
-            strings: ["A real Estate Developer", "a Kenyan based, international construction service company", "a leading builder in diverse and numerous market segments"],
-            typeSpeed: 30,
-            startDelay: 1000,
-          });
-    });
-    
-    $('#home, login.html, #about, designs, #services, #contact').waypoint(function() {
-        activenav($(this));
-    }, { offset: function() {
-        return -$(this).height()+52;
-      }});
-    $('#home, login.html, #about, designs, #services, #contact').waypoint(function() {
-        activenav($(this));
-    }, { offset: '51px' });
-    
-  $('#designs').waypoint(function() {
-        $(this).find('.section-title, #filters').addClass('animated fadeInUp');
-            $(this).find('.item').addClass('animated zoomIn');
-    },{ offset: function() {
-        return $(window).height()-2;
-      }});
-   
-    $('#about').waypoint(function() {
-        $(this).find(' .section-title, .desc ').addClass('animated fadeInUp');
-        $(this).find('.button').addClass('animated zoomIn');
-    }, { offset: function() {
-        return $(window).height()-2;
-      }});
-    $('.timeline-row').waypoint(function() {
-        if(!isMobile){
-            $(this).filter(':nth-child(even)').find('.timeline-content').addClass('animated fadeInRight').end()
-            .find('.timeline-time').addClass('animated fadeInLeft').end()
-            .find('.timeline-icon').addClass('animated zoomIn');
-            $(this).filter(':nth-child(odd)').find('.timeline-content').addClass('animated fadeInLeft').end()
-            .find('.timeline-time').addClass('animated fadeInRight').end()
-            .find('.timeline-icon').addClass('animated zoomIn');
+            uniform vec4 pointColor;
+
+            void main() {
+
+            gl_FragColor = pointColor;
+
+            }
+
+        </script>
+
+        <script>
+
+        var container;
+
+        var scene, camera, light, renderer;
+        var geometry, cube, mesh, material;
+
+        var data, texture, points;
+
+        var controls;
+
+        var fboParticles, rtTexturePos, rtTexturePos2, simulationShader;
+
+        var planeMat, planeGeo, plane;
+
+        var isMobile = $.browser.mobile;
+
+        if (!isMobile) {
+            init();
+            animate();
         } else {
-            $(this).find('.timeline-content').addClass('animated fadeInRight').end()
-            .find('.timeline-time').addClass('animated fadeInLeft').end()
-            .find('.timeline-icon').addClass('animated zoomIn');
+            $('#home').addClass('static-bg');
         }
-    }, { offset: function() {
-        return $(window).height()+100;
-      }});
-   
-    $('#contact').waypoint(function() {
-        $(this).find(' .section-title, .desc ').addClass('animated fadeInUp');
-            $(this).find('.social a').addClass('animated zoomIn');
-    }, { offset: function() {
-        return $(window).height()-2;
-      }});
-    
-  function toggleDetail(ele){
-        
-        $(ele).children(".work_details").toggleClass("auto_height");
-            $(ele).siblings('.item').children(".work_details").removeClass("auto_height");
-            $container.isotope('reLayout');  
-      };
-    function activenav(ele){
-    var eleid = ele.attr('id');
-    $('.masthead li').removeClass('active');
-    $('.masthead').find('a[href=#'+eleid+']').parent().addClass('active');
-  }
-    function widthcalc(){
-    var wrapwidth = $container.width()
-    
-    if (wrapwidth / 4 >=250){
-      worksisotope( wrapwidth / 4 );
-    }else if (wrapwidth / 3 >=250){
-      worksisotope( wrapwidth / 3 );
-    }else if (wrapwidth / 2 >=250){
-      worksisotope( wrapwidth / 2 );
-    }else {
-      worksisotope( wrapwidth );
-    }
-  }
-  function worksisotope( iwidth ){
-      //console.log(iwidth);
-      $('.item').width(Math.floor(iwidth));
-      $container.imagesLoaded(function() {
-        $container.isotope({
-          itemSelector : '.item',
-          resizable: false, 
-          masonry: { columnWidth: Math.floor(iwidth) },
-        });
-      });
-    
-  }
-    $(".fancybox").fancybox({
-      padding : 0,
-      helpers : {
-        overlay : {
-          css : {
-            'background' : 'rgba(0, 0, 0, 0.90)'
-          }
-        },
-      beforeLoad : {
-      }
-      }
-    });
-    cover-designation
 
-</script>
+        function init() {
 
-</body>
+            container = document.createElement('div');
+            document.body.appendChild(container);
+            $('#canvasAnimation').append(container);
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 1000);
+            scene.add(camera);
+
+            controls = new THREE.OrbitControls2(camera);
+            controls.radius = 400;
+            controls.speed = 2;
+
+            //
+
+            var width = 900, height = 900;
+
+            if (!renderer.context.getExtension('OES_texture_float')) {
+
+                console.log('OES_texture_float is not :(');
+
+            }
+
+            // Start Creation of DataTexture
+            // Could it be simplified with THREE.FBOUtils.createTextureFromData(textureWidth, textureWidth, data); ?
+
+            data = new Float32Array(width * height * 3);
+
+            texture = new THREE.DataTexture(data, width, height, THREE.RGBFormat, THREE.FloatType);
+            texture.minFilter = THREE.NearestFilter;
+            texture.magFilter = THREE.NearestFilter;
+            texture.needsUpdate = true;
+
+
+            // zz85 - fbo init
+
+            rtTexturePos = new THREE.WebGLRenderTarget(width, height, {
+                wrapS: THREE.RepeatWrapping,
+                wrapT: THREE.RepeatWrapping,
+                minFilter: THREE.NearestFilter,
+                magFilter: THREE.NearestFilter,
+                format: THREE.RGBFormat,
+                type: THREE.FloatType,
+                stencilBuffer: false
+            });
+
+            rtTexturePos2 = rtTexturePos.clone();
+
+            simulationShader = new THREE.ShaderMaterial({
+                uniforms: {
+                    tPositions: {type: "t", value: texture},
+                    origin: {type: "v3", value: new THREE.Vector3()},
+                    timer: {type: "f", value: 0}
+                },
+                vertexShader: document.getElementById('texture_vertex_simulation_shader').textContent,
+                fragmentShader: document.getElementById('texture_fragment_simulation_shader').textContent
+
+            });
+
+            fboParticles = new THREE.FBOUtils(width, renderer, simulationShader);
+            fboParticles.renderToTexture(rtTexturePos, rtTexturePos2);
+
+            fboParticles.in = rtTexturePos;
+            fboParticles.out = rtTexturePos2;
+
+
+            geometry = new THREE.Geometry();
+
+            for (var i = 0, l = width * height; i < l; i++) {
+
+                var vertex = new THREE.Vector3();
+                vertex.x = (i % width) / width;
+                vertex.y = Math.floor(i / width) / height;
+                geometry.vertices.push(vertex);
+
+            }
+
+            material = new THREE.ShaderMaterial({
+                uniforms: {
+                    "map": {type: "t", value: rtTexturePos},
+                    "width": {type: "f", value: width},
+                    "height": {type: "f", value: height},
+                    "pointColor": {type: "v4", value: new THREE.Vector4(0, 0.24, 0.2, 0.07)},
+                    "pointSize": {type: "f", value: 1}
+
+                },
+                vertexShader: document.getElementById('vs-particles').textContent,
+                fragmentShader: document.getElementById('fs-particles').textContent,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+                depthTest: false,
+                transparent: true
+
+            });
+
+            mesh = new THREE.ParticleSystem(geometry, material);
+            scene.add(mesh);
+
+    //        var gui = new dat.GUI();
+    //        gui.add( material.uniforms.pointColor.value, 'x', 0.0, 1.0 ).name( 'red' );
+    //        gui.add( material.uniforms.pointColor.value, 'y', 0.0, 1.0 ).name( 'green' );
+    //        gui.add( material.uniforms.pointColor.value, 'z', 0.0, 1.0 ).name( 'blue' );
+    //        gui.add( material.uniforms.pointColor.value, 'w', 0.0, 1.0 ).name( 'alpha' );
+    //        gui.add( material.uniforms.pointSize, 'value', 0.0, 10.0 ).name( 'size' );
+    //        gui.add( controls, 'enabled' ).name( 'auto move' );
+
+            scene.add(new THREE.Mesh(new THREE.CubeGeometry(500, 500, 500), new THREE.MeshBasicMaterial({color: 0xffffff, wireframe: true, opacity: 0, transparent: true})));
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+            render();
+
+        }
+
+        var timer = 0;
+
+        function render() {
+
+            timer += 0.005;
+
+            simulationShader.uniforms.timer.value = timer;
+            simulationShader.uniforms.origin.value.x = Math.sin(timer * 2.3) * 0.5 + 0.5;
+            simulationShader.uniforms.origin.value.y = Math.cos(timer * 2.5) * 0.5 + 0.5;
+            simulationShader.uniforms.origin.value.z = Math.sin(timer * 2.7) * 0.5 + 0.5;
+
+            // swap
+            var tmp = fboParticles.in;
+            fboParticles.in = fboParticles.out;
+            fboParticles.out = tmp;
+
+            simulationShader.uniforms.tPositions.value = fboParticles.in;
+            fboParticles.simulate(fboParticles.out);
+            material.uniforms.map.value = fboParticles.out;
+
+            controls.update();
+
+            renderer.render(scene, camera);
+
+        }
+
+
+        </script>
+        <!-- window scroll -->
+        <script>
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 1) {
+                    $('.masthead').addClass("sticky");
+                } else {
+                    $('.masthead').removeClass("sticky");
+                }
+            });
+            $(".masthead a, a.button").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top - 50}, 500);
+
+
+            });
+            $().ready(function () {
+                $('#home').find('.cover-hello, .cover-heading, .cover-designation, .cover-button').addClass('animated bounceInUp');
+                $('#home').find('.social a').addClass('animated zoomIn');
+                $('#home').find('.cover-wrapper-inner, .cover-button').removeClass('transparent');
+
+
+                $container = $('.works_list ul');
+                $container.isotope({
+                    onLayout: function () {
+                        $.waypoints('refresh');
+                    }
+                });
+                var e = $(".isotope");
+                e.imagesLoaded(function () {
+                    e.isotope({
+                        itemSelector: ".element-item",
+                        layoutMode: "fitRows",
+                    });
+                });
+                var t = {};
+                $("#filters").on("click", "button", function () {
+                    var n = $(this).attr("data-filter");
+                    $(this).addClass("active");
+                    $(this).siblings().removeClass("active");
+                    n = t[n] || n;
+                    e.isotope({
+                        filter: n
+                    })
+                })
+
+                if (isMobile) {
+                    $(".item").click(function () {
+                        toggleDetail(this);
+
+                    });
+                } else {
+                    $(".item").hover(function () {
+                        toggleDetail(this);
+
+                    });
+                }
+
+                widthcalc();
+                $(window).resize(function () {
+                    widthcalc();
+                    $.waypoints('refresh');
+                });
+
+                $(".cover-designation span").typed({
+                    strings: ["A real Estate Developer", "a Kenyan based, international construction service company", "a leading builder in diverse and numerous market segments"],
+                    typeSpeed: 30,
+                    startDelay: 1000,
+                });
+            });
+
+            $('#home, a[href="login.html"], #about, designs, #services, #contact').waypoint(function () {
+                activenav($(this));
+            }, {offset: function () {
+                    return -$(this).height() + 52;
+                }});
+            $('#home, a[href="login.html"], #about, designs, #services, #contact').waypoint(function () {
+                activenav($(this));
+            }, {offset: '51px'});
+
+            $('#designs').waypoint(function () {
+                $(this).find('.section-title, #filters').addClass('animated fadeInUp');
+                $(this).find('.item').addClass('animated zoomIn');
+            }, {offset: function () {
+                    return $(window).height() - 2;
+                }});
+
+            $('#about').waypoint(function () {
+                $(this).find(' .section-title, .desc ').addClass('animated fadeInUp');
+                $(this).find('.button').addClass('animated zoomIn');
+            }, {offset: function () {
+                    return $(window).height() - 2;
+                }});
+            $('.timeline-row').waypoint(function () {
+                if (!isMobile) {
+                    $(this).filter(':nth-child(even)').find('.timeline-content').addClass('animated fadeInRight').end()
+                            .find('.timeline-time').addClass('animated fadeInLeft').end()
+                            .find('.timeline-icon').addClass('animated zoomIn');
+                    $(this).filter(':nth-child(odd)').find('.timeline-content').addClass('animated fadeInLeft').end()
+                            .find('.timeline-time').addClass('animated fadeInRight').end()
+                            .find('.timeline-icon').addClass('animated zoomIn');
+                } else {
+                    $(this).find('.timeline-content').addClass('animated fadeInRight').end()
+                            .find('.timeline-time').addClass('animated fadeInLeft').end()
+                            .find('.timeline-icon').addClass('animated zoomIn');
+                }
+            }, {offset: function () {
+                    return $(window).height() + 100;
+                }});
+
+            $('#contact').waypoint(function () {
+                $(this).find(' .section-title, .desc ').addClass('animated fadeInUp');
+                $(this).find('.social a').addClass('animated zoomIn');
+            }, {offset: function () {
+                    return $(window).height() - 2;
+                }});
+
+            function toggleDetail(ele) {
+
+                $(ele).children(".work_details").toggleClass("auto_height");
+                $(ele).siblings('.item').children(".work_details").removeClass("auto_height");
+                $container.isotope('reLayout');
+            }
+            ;
+            function activenav(ele) {
+                var eleid = ele.attr('id');
+                $('.masthead li').removeClass('active');
+                $('.masthead').find('a[href=#' + eleid + ']').parent().addClass('active');
+            }
+            function widthcalc() {
+                var wrapwidth = $container.width()
+
+                if (wrapwidth / 4 >= 250) {
+                    worksisotope(wrapwidth / 4);
+                } else if (wrapwidth / 3 >= 250) {
+                    worksisotope(wrapwidth / 3);
+                } else if (wrapwidth / 2 >= 250) {
+                    worksisotope(wrapwidth / 2);
+                } else {
+                    worksisotope(wrapwidth);
+                }
+            }
+            function worksisotope(iwidth) {
+                //console.log(iwidth);
+                $('.item').width(Math.floor(iwidth));
+                $container.imagesLoaded(function () {
+                    $container.isotope({
+                        itemSelector: '.item',
+                        resizable: false,
+                        masonry: {columnWidth: Math.floor(iwidth)},
+                    });
+                });
+
+            }
+            $(".fancybox").fancybox({
+                padding: 0,
+                helpers: {
+                    overlay: {
+                        css: {
+                            'background': 'rgba(0, 0, 0, 0.90)'
+                        }
+                    },
+                    beforeLoad: {
+                    }
+                }
+            });
+            cover - designation
+
+        </script>
+
+    </body>
 
 </html>

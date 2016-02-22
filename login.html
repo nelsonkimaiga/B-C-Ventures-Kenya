@@ -6,7 +6,7 @@
         <meta name="description" content="Real Estate">
 <!-- for-mobile-view -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>B&C Ventures|login</title>
+        <title>Login</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="css/foundation.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -36,10 +36,10 @@
             }
         </script>
 </head>
-<body>
+<body id="login-page">
     <!-- login form -->
     <div class="container">
-        <form action="" method="POST" name="loginForm" class="small-12 medium-12 large-12 columns" onsubmit="return validateForm()">
+        <form action="" method="POST" name="loginForm" class="small-8 small-centered medium-centered large-centered columns" onsubmit="return validateForm()">
             <fieldset>
                 <label>Username</label>
                 <input type="text" name="user_name" class="validate" placeholder="Username">
@@ -49,21 +49,22 @@
                 <input type="password" name="pass_word" class="validate" placeholder="Password">
             </fieldset>
             <button type="submit" class="button primary">Login</button>
+            <a href="">Forgot Password?</a>
         </form>
     </div>
     <!-- footer -->
-    <div class="footer">
+<!--    <div class="footer">
         <div class="copy">
             <div class="container">
                 <p>All Rights Reserved |<a href="index.html">Briclin Kenya</a></p>
             </div>
-            <!-- curent date and year to appear on footer-->
+             curent date and year to appear on footer
             &copy; B&C Ventures
             <script type="text/javascript">
                 document.write(new Date().getFullYear());
                             </script>
         </div>
-    </div>
+    </div>-->
     <script src="js/foundation.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
 </body>
