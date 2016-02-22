@@ -78,6 +78,7 @@ p {
     color: #fff;
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .masthead-nav > li > a:hover,
@@ -88,7 +89,7 @@ p {
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-    color: #7afbc4;
+    color: #3adb76;
 }
 
 .masthead-brand {
@@ -135,7 +136,7 @@ p {
 /*cover-section*/
 .cover-container {
     background: #29293a;
-    background-image: url("../images/5.jpg");
+    background-image: url("../images/10.jpg");
     overflow: hidden;
     width: 100%;
     height: 100%;
