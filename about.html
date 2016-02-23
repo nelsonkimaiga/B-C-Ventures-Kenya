@@ -19,15 +19,30 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
-         <!--slick image slider-->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+         <!-- Important Owl stylesheet -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <!-- Default Theme -->
+        <link rel="stylesheet" href="css/owl.theme.css">
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     </head>
     <body>
-     
+        <div class="row full slider">
+            <div><img src="images/slider1.jpg" alt=""/></div>
+            <div><img src="images/slider2.jpg" alt=""/></div>
+            <div><img src="images/slider3.jpg" alt=""/></div>
+            <div><img src="images/slider4.jpg" alt=""/></div>
+            
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $(".slider").owlCarousel({
+                        singleItem:true
+                    });
+                });
+                            
+            </script>
+        </div>
         
-        <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
         <script type="text/javascript" src="js/foundation.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.js"></script>
     </body>
 </html>
