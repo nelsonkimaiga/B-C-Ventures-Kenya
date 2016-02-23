@@ -59,7 +59,6 @@
                     <ul class="nav masthead-nav">
                         <li class="active"><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#designs">Interior Designs</a></li>
                         <li><a href="#services">Our Services</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -109,17 +108,6 @@
                     <h3 class="section-title text-primary delay-02" id="about-heading">About us</h3>
                     <p class="desc delay-04">B&C ventures is a Kenyan based, international construction service company and is a leading builder in diverse and numerous market segments. We have earned recognition for undertaking large, complex projects, fostering innovation, embracing emerging technologies and making a difference for their clients, employees and community. We offer client the accessibility and support of a local firm with the stability and resource of a local firm with the stability and resource of a multi national organization.
                     </p>
-                </div>
-            </div>
-        </div>
-        <!-- Interior Designs -->
-        <div id="designs" class="about-container">
-            <div class="banner">
-                <div class="container">
-                    <h3 class="section-title text-primary delay-02">Interior Designs</h3>
-                    <p class="desc delay-04">We also deal in the supply of household products.
-                    </p>
-                    <img src="images/th(6).jpg" class="img-rounded" width=500 height=300/>
                 </div>
             </div>
         </div>
@@ -565,12 +553,12 @@
                 });
             });
 
-            $('#home, a[href="login.html"], #about, designs, #services, #contact').waypoint(function () {
+            $('#home, a[href="login.html"], #about, #services, #contact').waypoint(function () {
                 activenav($(this));
             }, {offset: function () {
                     return -$(this).height() + 52;
                 }});
-            $('#home, a[href="login.html"], #about, designs, #services, #contact').waypoint(function () {
+            $('#home, a[href="login.html"], #about, #services, #contact').waypoint(function () {
                 activenav($(this));
             }, {offset: '51px'});
 
