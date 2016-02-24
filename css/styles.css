@@ -390,3 +390,9 @@ p {
 #login-page{
     background-color: #29293a;
 }
+
+.slider-pics{
+    height: 550em;
+    width: 100%;
+    object-fit: cover;
+}
