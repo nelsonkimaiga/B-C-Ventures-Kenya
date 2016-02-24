@@ -19,29 +19,38 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
         <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
-         <!-- Important Owl stylesheet -->
+        <!-- Important Owl stylesheet -->
         <link rel="stylesheet" href="css/owl.carousel.css">
         <!-- Default Theme -->
         <link rel="stylesheet" href="css/owl.theme.css">
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     </head>
     <body>
-        <div class="slider">
+        <div class="slider carousel">
             <div><img src="images/slider1.jpg" alt="" class="slider-pics"/></div>
             <div><img src="images/slider2.jpg" alt="" class="slider-pics"/></div>
             <div><img src="images/slider4.jpg" alt="" class="slider-pics"/></div>
         </div>
-        
-        
+        <!--Image slider JavaScript //Carousel-->        
         <script type="text/javascript">
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $(".slider").owlCarousel({
-                    singleItem:true,
-                    navigation:true
+                    singleItem: true,
+                    navigation: true
                 });
             });
-                    
+
         </script>
+        <br>
+        <div id="about-description" class="">
+            <article>
+                <h1 id="description-title">About Us</h1>
+                <p>B&C ventures is a Kenyan based, international construction service company and is a leading builder in diverse and numerous market segments. We have earned recognition for undertaking large, complex projects, fostering innovation, embracing emerging technologies and making a difference for their clients, employees and community. We offer client the accessibility and support of a local firm with the stability and resource of a local firm with the stability and resource of a multi national organization.</p>
+            </article>
+        </div>
+
+
+
         <script type="text/javascript" src="js/foundation.js"></script>
         <script type="text/javascript" src="js/owl.carousel.js"></script>
     </body>
