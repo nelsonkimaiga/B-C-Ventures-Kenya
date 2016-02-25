@@ -254,7 +254,6 @@ p {
 }
 
 .contact-container {
-        background: #ebfffc url("../images/footer-bg.jpg") no-repeat bottom center;
         background-size: cover;
         min-height: calc(100vh - 49px);
         position: relative;
