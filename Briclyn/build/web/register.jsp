@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : Mar 16, 2016, 10:34:40 AM
+    Document   : register
+    Created on : Mar 16, 2016, 3:13:41 PM
     Author     : kimaiga
 --%>
 
@@ -55,7 +55,7 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li class="menu-text">Briclyn Kenya</li>
                     <li></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="register.jsp">Register</a></li>
                     <li><a href="#">List Your Property</a></li>
@@ -70,35 +70,31 @@
                 </ul>
             </div>
         </div>
-    <br>
+        <br>
         <div class="container">
-            <form action="" method="get" name="searchForm" onsubmit="return validateForm()">
-                <div class="row">
-                    <div class="large-4 medium-12 small-12 columns">
-                        <label>Name of Location</label>
-                        <input type="text" name="location" autocomplete="off" placeholder="What is your location?">                    
-                    </div>
-                    <div class="large-4 medium-12 small-12 columns">
+            <div class="row">
+                <div class="large-6 large-centered columns">
+                    <form action="" method="POST" name="registrationForm" onsubmit="return validateForm()">
                         <fieldset>
-                            <label>Property Type</label>
-                            <select name="propertytype">
-                                <option value="default" selected disabled>Property Type</option>
-                                <option value=""></option>
-                            </select>
+                            <label>Full Names</label>
+                            <input type="text" name="names" placeholder="Full Names" autocomplete="off">
                         </fieldset>
-                    </div>
-                    <div class="large-4 medium-12 small-12 columns">
                         <fieldset>
-                            <label>Maximum Price</label>
-                            <input type="text" name="price" placeholder="Maximum Price">
+                            <label>Email Address</label>
+                            <input type="email" name="email" placeholder="Email" autocomplete="off">
                         </fieldset>
-                    </div>
-                        
+                        <fieldset>
+                            <label>Username</label>
+                            <input type="text" name="username" placeholder="Username" autocomplete="off">
+                        </fieldset>
+                        <fieldset>
+                            <label>Password</label>
+                            <input type="text" name="password" placeholder="Password" autocomplete="off"> 
+                        </fieldset>
+                        <button type="submit" class="button success">Register</button>
+                    </form>
                 </div>
-                <button type="submit" class="button success"><i class="fi-magnifying-glass">Search</i></button>
-            </form>
+            </div>
         </div>
-    
-    
     </body>
 </html>

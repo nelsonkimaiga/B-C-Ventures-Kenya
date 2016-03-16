@@ -57,7 +57,7 @@
                     <li></li>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Search</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="register.jsp">Register</a></li>
                     <li><a href="#">List Your Property</a></li>
                     <li><a href="#">Post Your Requirement</a></li>
                     <li><a href="login.jsp">Login</a></li>
