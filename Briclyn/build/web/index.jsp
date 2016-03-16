@@ -27,16 +27,22 @@
         <!-- form validation -->
         <script type="text/javascript">
             function validateForm() {
-                var x = document.forms["loginForm"]["username"].value;
-                var y = document.forms["loginForm"]["password"].value;
+                var x = document.forms["searchForm"]["location"].value;
+                var y = document.forms["searchForm"]["propertytype"].value;
+                var z = document.forms["searchForm"]["price"].value;
 
                 if (x == null || x == "") {
-                    alert("Username must be filled out");
+                    alert("Name must be filled out");
                     return false;
                 }
 
                 if (y == null || y == "") {
-                    alert("password must be filled out");
+                    alert("Property type must be filled out");
+                    return false;
+                }
+                
+                if (z == null || z == "") {
+                    alert("Price must be filled out");
                     return false;
                 }
                 return true;
@@ -66,7 +72,7 @@
         </div>
     <br>
         <div class="container">
-            <form>
+            <form action="" method="get" name="searchForm" onsubmit="return validateForm()">
                 <div class="row">
                     <div class="large-4 medium-12 small-12 columns">
                         <label>Name of Location</label>
