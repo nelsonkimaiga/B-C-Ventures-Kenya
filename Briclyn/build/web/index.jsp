@@ -27,28 +27,16 @@
         <!-- form validation -->
         <script type="text/javascript">
             function validateForm() {
-                var x = document.forms["contactForm"]["name"].value;
-                var y = document.forms["contactForm"]["phone"].value;
-                var z = document.forms["contactForm"]["email"].value;
-                var m = document.forms["contactForm"]["message"].value;
+                var x = document.forms["loginForm"]["name"].value;
+                var y = document.forms["loginForm"]["phone"].value;
 
                 if (x == null || x == "") {
-                    alert("Name must be filled out");
+                    alert("Username must be filled out");
                     return false;
                 }
 
-                if (y == null || y == "" || (y.value < 10) || (isNaN(y.value))) {
-                    alert("number must be filled out");
-                    return false;
-                }
-
-                if (z == null || z == "") {
-                    alert("email must be filled out");
-                    return false;
-                }
-
-                if (m == null || m == "") {
-                    alert("message must be filled out");
+                if (y == null || y == "") {
+                    alert("password must be filled out");
                     return false;
                 }
                 return true;
@@ -70,6 +58,30 @@
                     <li><input type="search" placeholder="Search"></li>
                     <li><button type="button" class="button">Search</button></li>
                 </ul>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="large-6 large-centered columns">
+                <form action="" method="POST" name="loginForm" autocomplete="off" onsubmit="return validateForm()">
+                    <fieldset>
+                        <label>Username</label>
+                        <input type="text" name="username" autocomplete="off" placeholder="Username">
+                    </fieldset>
+                    <fieldset>
+                        <label>Password</label>
+                        <input type="password" name="password" autocomplete="off" placeholder="Password">
+                    </fieldset>
+                    <button type="submit" class="button primary">Login</button>
+                    <div class="row">
+                        <div class="large-6 small-12 columns">
+                            <p><a href="#">Forgot Password?</a></p>
+                        </div>
+                        <div class="large-6 small-12 columns">
+                            <p><a href="#">New User</a></p>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </body>
