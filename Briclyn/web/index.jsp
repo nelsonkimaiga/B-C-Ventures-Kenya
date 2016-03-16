@@ -64,7 +64,35 @@
                 </ul>
             </div>
         </div>
-    <body>
-        <h1>Hello World!</h1>
+    <br>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="large-4 medium-12 small-12 columns">
+                        <label>Name of Location</label>
+                        <input type="text" name="location" autocomplete="off" placeholder="What is your location?">                    
+                    </div>
+                    <div class="large-4 medium-12 small-12 columns">
+                        <fieldset>
+                            <label>Property Type</label>
+                            <select name="propertytype">
+                                <option value="default" selected disabled>Property Type</option>
+                                <option value=""></option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div class="large-4 medium-12 small-12 columns">
+                        <fieldset>
+                            <label>Maximum Price</label>
+                            <input type="text" name="price" placeholder="Maximum Price">
+                        </fieldset>
+                    </div>
+                        
+                </div>
+                <button type="submit" class="button success"><i class="fi-magnifying-glass">Search</i></button>
+            </form>
+        </div>
+    
+    
     </body>
 </html>
