@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Mar 16, 2016, 10:34:40 AM
+    Created on : Mar 16, 2016, 9:32:55 AM
     Author     : kimaiga
 --%>
 
@@ -54,7 +54,7 @@
                     <li><a href="#">Register</a></li>
                     <li><a href="#">List Your Property</a></li>
                     <li><a href="#">Post Your Requirement</a></li>
-                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
             </div>
             <div class="top-bar-right">
@@ -64,7 +64,31 @@
                 </ul>
             </div>
         </div>
-    <body>
-        <h1>Hello World!</h1>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="large-6 large-centered columns">
+                    <form action="" method="POST" name="loginForm" autocomplete="off" onsubmit="return validateForm()">
+                        <fieldset>
+                            <label>Username</label>
+                            <input type="text" name="username" autocomplete="off" placeholder="Username">
+                        </fieldset>
+                        <fieldset>
+                            <label>Password</label>
+                            <input type="password" name="password" autocomplete="off" placeholder="Password">
+                        </fieldset>
+                        <button type="submit" class="button primary">Login</button>
+                        <div class="row">
+                            <div class="large-6 small-12 columns">
+                                <p><a href="#">Forgot Password?</a></p>
+                            </div>
+                            <div class="large-6 small-12 columns">
+                                <p><a href="#">New User</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
     </body>
 </html>

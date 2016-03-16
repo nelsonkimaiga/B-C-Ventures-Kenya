@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : Mar 16, 2016, 9:32:55 AM
+    Created on : Mar 16, 2016, 10:34:40 AM
     Author     : kimaiga
 --%>
 
@@ -27,8 +27,8 @@
         <!-- form validation -->
         <script type="text/javascript">
             function validateForm() {
-                var x = document.forms["loginForm"]["name"].value;
-                var y = document.forms["loginForm"]["phone"].value;
+                var x = document.forms["loginForm"]["username"].value;
+                var y = document.forms["loginForm"]["password"].value;
 
                 if (x == null || x == "") {
                     alert("Username must be filled out");
@@ -49,8 +49,12 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li class="menu-text">Briclyn Kenya</li>
                     <li></li>
-                    <li><a href="#">foo</a></li>
-                    <li><a href="#">foo</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">List Your Property</a></li>
+                    <li><a href="#">Post Your Requirement</a></li>
+                    <li><a href="login.jsp">Login</a></li>
                 </ul>
             </div>
             <div class="top-bar-right">
@@ -60,29 +64,7 @@
                 </ul>
             </div>
         </div>
-        <br>
-        <div class="row">
-            <div class="large-6 large-centered columns">
-                <form action="" method="POST" name="loginForm" autocomplete="off" onsubmit="return validateForm()">
-                    <fieldset>
-                        <label>Username</label>
-                        <input type="text" name="username" autocomplete="off" placeholder="Username">
-                    </fieldset>
-                    <fieldset>
-                        <label>Password</label>
-                        <input type="password" name="password" autocomplete="off" placeholder="Password">
-                    </fieldset>
-                    <button type="submit" class="button primary">Login</button>
-                    <div class="row">
-                        <div class="large-6 small-12 columns">
-                            <p><a href="#">Forgot Password?</a></p>
-                        </div>
-                        <div class="large-6 small-12 columns">
-                            <p><a href="#">New User</a></p>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <body>
+        <h1>Hello World!</h1>
     </body>
 </html>
