@@ -13,7 +13,7 @@
         <meta name="description" content="Real Estate">
         <!-- for-mobile-view -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>B&C Ventures|Home</title>
+        <title>B&C Ventures|Registration</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="css/foundation.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -27,22 +27,28 @@
         <!-- form validation -->
         <script type="text/javascript">
             function validateForm() {
-                var x = document.forms["searchForm"]["location"].value;
-                var y = document.forms["searchForm"]["propertytype"].value;
-                var z = document.forms["searchForm"]["price"].value;
+                var u = document.forms["registrationForm"]["name"].value;
+                var v = document.forms["registrationForm"]["email"].value;
+                var w = document.forms["registrationForm"]["username"].value;
+                var x = document.forms["registrationForm"]["password"].value;
 
-                if (x == null || x == "") {
-                    alert("Name must be filled out");
+                if (u == null || x == "") {
+                    alert("Username must be filled out");
                     return false;
                 }
 
-                if (y == null || y == "") {
-                    alert("Property type must be filled out");
+                if (v == null || y == "") {
+                    alert("Email must be filled out");
                     return false;
                 }
                 
-                if (z == null || z == "") {
-                    alert("Price must be filled out");
+                if (w == null || z == "") {
+                    alert("Username must be filled out");
+                    return false;
+                }
+                
+                if (x == null || z == "") {
+                    alert("Password must be filled out");
                     return false;
                 }
                 return true;
@@ -76,19 +82,19 @@
                 <div class="large-6 large-centered columns">
                     <form action="" method="POST" name="registrationForm" onsubmit="return validateForm()">
                         <fieldset>
-                            <label>Full Names</label>
+                            <label>Full Names*</label>
                             <input type="text" name="names" placeholder="Full Names" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Email Address</label>
+                            <label>Email Address*</label>
                             <input type="email" name="email" placeholder="Email" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Username</label>
+                            <label>Username*</label>
                             <input type="text" name="username" placeholder="Username" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Password</label>
+                            <label>Password*</label>
                             <input type="text" name="password" placeholder="Password" autocomplete="off"> 
                         </fieldset>
                         <button type="submit" class="button success">Register</button>
