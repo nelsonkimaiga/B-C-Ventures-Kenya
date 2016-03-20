@@ -55,7 +55,7 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li class="menu-text">Briclyn Kenya</li>
                     <li></li>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="#">Search</a></li>
                     <li><a href="register.jsp">Register</a></li>
                     <li><a href="#">List Your Property</a></li>

@@ -29,6 +29,7 @@
             function validateForm() {
                 var u = document.forms["registrationForm"]["name"].value;
                 var v = document.forms["registrationForm"]["email"].value;
+                var y = document.forms["registrationForm"]["phonenumber"].value;
                 var w = document.forms["registrationForm"]["username"].value;
                 var x = document.forms["registrationForm"]["password"].value;
 
@@ -37,8 +38,13 @@
                     return false;
                 }
 
-                if (v == null || y == "") {
+                if (v == null || v == "") {
                     alert("Email must be filled out");
+                    return false;
+                }
+                
+                if(y==null || y == "" || (y.value < 10) || (isNaN(y.value))){
+                    alert("Phone Number must be filled out");
                     return false;
                 }
                 
@@ -80,7 +86,7 @@
         <div class="container">
             <div class="row">
                 <div class="large-6 large-centered columns">
-                    <form action="" method="POST" name="registrationForm" onsubmit="return validateForm()">
+                    <form action="regBriclyn.jsp" method="POST" name="registrationForm" onsubmit="return validateForm()">
                         <fieldset>
                             <label>Full Names*</label>
                             <input type="text" name="names" placeholder="Full Names" autocomplete="off">
@@ -88,6 +94,10 @@
                         <fieldset>
                             <label>Email Address*</label>
                             <input type="email" name="email" placeholder="Email" autocomplete="off">
+                        </fieldset>
+                        <fieldset>
+                            <label>Phone Number</label>
+                            <input type="text" name="phonenumber" placeholder="Phone Number" autocomplete="off">
                         </fieldset>
                         <fieldset>
                             <label>Username*</label>
