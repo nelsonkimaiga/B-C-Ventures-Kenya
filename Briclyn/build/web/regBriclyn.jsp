@@ -1,12 +1,5 @@
-<%-- 
-    Document   : regBriclyn
-    Created on : Mar 20, 2016, 4:06:17 PM
-    Author     : kimaiga
---%>
-
 <%@page import="scripts.DbConn"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" errorPage=""%>
-<jsp:useBean id="dbConn" scope="request" class="scripts.DbConn"/>
 <%
     Connection conn = null;
     conn = DbConn.connectDB();
@@ -22,7 +15,11 @@ String password = request.getParameter("password");
 		try{
                     String sql="insert into registration (name, email, phonenumber, username, password)"+"values('"+name+"', '"+email+"', '"+contacts+"', '"+username+"', '"+password+"')";
 			st=conn.prepareStatement(sql);
-                        st.setString(0, name);
+                        st.setString(1, name);
+                        st.setString(2, email);
+                        st.setString(3, contacts);
+                        st.setString(4, username);
+                        st.setString(5, );
 			
 			st.executeUpdate();
 		}

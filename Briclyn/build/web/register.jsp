@@ -1,10 +1,4 @@
-<%-- 
-    Document   : register
-    Created on : Mar 16, 2016, 3:13:41 PM
-    Author     : kimaiga
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,14 +21,13 @@
         <!-- form validation -->
         <script type="text/javascript">
             function validateForm() {
-                var u = document.forms["registrationForm"]["name"].value;
+                var u = document.forms["registrationForm"]["names"].value;
                 var v = document.forms["registrationForm"]["email"].value;
-                var y = document.forms["registrationForm"]["phonenumber"].value;
                 var w = document.forms["registrationForm"]["username"].value;
                 var x = document.forms["registrationForm"]["password"].value;
 
-                if (u == null || x == "") {
-                    alert("Username must be filled out");
+                if (u == null || u == "") {
+                    alert("Name must be filled out");
                     return false;
                 }
 
@@ -43,17 +36,12 @@
                     return false;
                 }
                 
-                if(y==null || y == "" || (y.value < 10) || (isNaN(y.value))){
-                    alert("Phone Number must be filled out");
-                    return false;
-                }
-                
-                if (w == null || z == "") {
+                if (w == null || w == "") {
                     alert("Username must be filled out");
                     return false;
                 }
                 
-                if (x == null || z == "") {
+                if (x == null || x == "") {
                     alert("Password must be filled out");
                     return false;
                 }
@@ -97,7 +85,7 @@
                         </fieldset>
                         <fieldset>
                             <label>Phone Number</label>
-                            <input type="text" name="phonenumber" placeholder="Phone Number" autocomplete="off">
+                            <input type="number" name="phonenumber" placeholder="Phone Number" autocomplete="off">
                         </fieldset>
                         <fieldset>
                             <label>Username*</label>
