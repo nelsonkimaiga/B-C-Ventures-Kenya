@@ -15,7 +15,36 @@
     String area = request.getParameter("area");
     String address = request.getParameter("address");
     String price = request.getParameter("price");
-    
+
+	String sqlInsertlist_requirement=null;
+	
+	String sSessionUserID=(String)session.getAttribute("sUserID");
+	
+	PreparedStatement psListApprovalOption=null;
+	ResultSet rsListApprovalOption=null;
+        
+            try {
+                //attempt to save data
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
+                sqlInsertlist_requirement = "INSERT into list_requirement VALUES('"+title+"','"+type+"','"+proptype+"','"+region+"', '"+city+"', '"+area+"', '"+address+"', '"+price+"')" ;
+                Statement st = conn.createStatement();
+                Statement stList=null;
+	stList = conn.createStatement();
+                //change type of Resultset
+                boolean rs;
+                rs = st.execute(sqlInsertlist_requirement);
+                stList.executeUpdate(sqlInsertlist_requirement);
+//                response.sendRedirect("dashboard.html");
+ 
+            } catch (ClassNotFoundException ex){
+                ex.printStackTrace();
+                request.setAttribute("error","<span class='sSError'>&nbsp; Registration is not successful, May be User ID already Exists &nbsp; </span>");
+                RequestDispatcher dispatch = request.getRequestDispatcher("/register.jsp");
+                dispatch.forward(request, response);
+            }
+
+
 %>
 <!DOCTYPE html>
 <html>

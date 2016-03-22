@@ -144,7 +144,7 @@ public final class create_002dlisting_jsp extends org.apache.jasper.runtime.Http
       out.write("            <h3 class=\"menu-headings\">List Your Property</h3>\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"large-8 large-centered columns\">\n");
-      out.write("                    <form action=\"\" method=\"post\" name=\"listForm\" autocomplete=\"off\" onsubmit=\"return ValidateForm()\">\n");
+      out.write("                    <form action=\"doListing.jsp\" method=\"post\" name=\"listForm\" autocomplete=\"off\" onsubmit=\"return validateForm()\">\n");
       out.write("                        <fieldset>\n");
       out.write("                            <label class=\"labels\">Title</label>\n");
       out.write("                            <input type=\"text\" name=\"title\" placeholder=\"Property Title\">\n");
