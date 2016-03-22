@@ -93,7 +93,7 @@
                         </fieldset>
                         <fieldset>
                             <label>Password*</label>
-                            <input type="text" name="password" placeholder="Password" autocomplete="off"> 
+                            <input type="password" name="password" placeholder="Password" autocomplete="off"> 
                         </fieldset>
                         <button type="submit" class="button success">Register</button>
                     </form>
