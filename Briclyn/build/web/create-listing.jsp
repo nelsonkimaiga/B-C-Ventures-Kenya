@@ -48,12 +48,12 @@
         </div>
         <br>
         <div class="container">
-            <h3>List Your Property</h3>
+            <h3 class="menu-headings">List Your Property</h3>
             <div class="row">
                 <div class="large-8 large-centered columns">
                     <form action="" method="post" name="listForm" onsubmit="return ValidateForm()">
                         <fieldset>
-                            <label>Title</label>
+                            <label class="labels">Title</label>
                             <input type="text" name="title" placeholder="Property Title">
                         </fieldset>
                         <fieldset>
@@ -65,7 +65,7 @@
                             </select>
                         </fieldset>
                         <fieldset>
-                            <label>Property Type</label>
+                            <label class="labels">Property Type</label>
                             <select name="propertytype">
                                 <option value="default" selected disabled>Choose a property type</option>
                                 <option value="Apartment">Apartment</option>
@@ -75,35 +75,35 @@
                             </select>
                         </fieldset>
                         <hr>
-                        <p>Pick Location</p>
+                        <p class="menu-headings">Pick Location</p>
                         <hr>
                         <fieldset>
-                            <label>Region</label>
+                            <label class="labels">Region</label>
                             <select name="region">
                             <option value="default" selected disabled>Choose Your Region</option>
                             <option value="Nairobi">Nairobi</option>
                             </select>
                         </fieldset>
                         <fieldset>
-                            <label>City</label>
+                            <label class="labels">City</label>
                             <select name="city">
                             <option value="default" selected disabled>Choose Your City</option>
                             <option value="Nairobi">Nairobi</option>
                             </select>
                         </fieldset>
                         <fieldset>
-                            <label>Area</label>
+                            <label class="labels">Area</label>
                             <select name="area">
                             <option value="default" selected disabled>Choose Your Area</option>
                             <option value="Nairobi">Nairobi</option>
                             </select>
                         </fieldset>
                         <fieldset>
-                            <label>Address</label>
+                            <label class="labels">Address</label>
                             <input type="text" name="address" placeholder="Address">
                         </fieldset>
                         <fieldset>
-                            <label>Price</label>
+                            <label class="labels">Price</label>
                             <input type="text" name="price" placeholder="Price">
                         </fieldset>
                         <button type="submit" class="button success">Create Listing</button>
