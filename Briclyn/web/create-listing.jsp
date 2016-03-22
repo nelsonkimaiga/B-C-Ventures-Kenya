@@ -24,6 +24,60 @@
         <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+                <!-- form validation -->
+        <script type="text/javascript">
+            function validateForm() {
+                var a = document.forms["listForm"]["title"].value;
+                var b = document.forms["listForm"]["type"].value;
+                var c = document.forms["listForm"]["propertytype"].value;
+                var d = document.forms["listForm"]["region"].value;
+                var e = document.forms["listForm"]["city"].value;
+                var f = document.forms["listForm"]["area"].value;
+                var g = document.forms["listForm"]["address"].value;
+                var h = document.forms["listForm"]["price"].value;
+
+                if (a == null || a == "") {
+                    alert("Title must be filled out");
+                    return false;
+                }
+
+                if (b == null || b == "") {
+                    alert("Listing type must be filled out");
+                    return false;
+                }
+                
+                if (c == null || c == "") {
+                    alert("Property type must be filled out");
+                    return false;
+                }
+                
+                if (d == null || d == "") {
+                    alert("Region must be filled out");
+                    return false;
+                }
+                
+                if(e == null || e == ""){
+                    alert("City must be filled out");
+                    return false;
+                }
+                
+                if(f == null || f == ""){
+                    alert("Area must be filled out");
+                    return false;
+                }
+                
+                if(g == null || g == ""){
+                    alert("Address must be filled out");
+                    return false;
+                }
+                
+                if(h == null || h == ""){
+                    alert("Price must be filled out");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head> 
     <body>
         <div class="top-bar">
@@ -51,7 +105,7 @@
             <h3 class="menu-headings">List Your Property</h3>
             <div class="row">
                 <div class="large-8 large-centered columns">
-                    <form action="" method="post" name="listForm" onsubmit="return ValidateForm()">
+                    <form action="" method="post" name="listForm" autocomplete="off" onsubmit="return ValidateForm()">
                         <fieldset>
                             <label class="labels">Title</label>
                             <input type="text" name="title" placeholder="Property Title">
