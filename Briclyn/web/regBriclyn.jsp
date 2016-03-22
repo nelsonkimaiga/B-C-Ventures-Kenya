@@ -21,13 +21,13 @@
                 //change type of Resultset
                 boolean rs;
                 rs = st.execute(sql);
-                response.sendRedirect("dashboard.html");
+//                response.sendRedirect("dashboard.html");
  
             } catch (ClassNotFoundException ex){
-//                ex.printStackTrace();
-//                request.setAttribute("error","<span class='sSError'>&nbsp; Registration is not successful, May be User ID already Exists &nbsp; </span>");
-//                RequestDispatcher dispatch = request.getRequestDispatcher("/register.jsp");
-//                dispatch.forward(request, response);
+                ex.printStackTrace();
+                request.setAttribute("error","<span class='sSError'>&nbsp; Registration is not successful, May be User ID already Exists &nbsp; </span>");
+                RequestDispatcher dispatch = request.getRequestDispatcher("/register.jsp");
+                dispatch.forward(request, response);
             }
     }
 

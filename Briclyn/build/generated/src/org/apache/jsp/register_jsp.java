@@ -136,7 +136,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </fieldset>\n");
       out.write("                        <fieldset>\n");
       out.write("                            <label>Password*</label>\n");
-      out.write("                            <input type=\"text\" name=\"password\" placeholder=\"Password\" autocomplete=\"off\"> \n");
+      out.write("                            <input type=\"password\" name=\"password\" placeholder=\"Password\" autocomplete=\"off\"> \n");
       out.write("                        </fieldset>\n");
       out.write("                        <button type=\"submit\" class=\"button success\">Register</button>\n");
       out.write("                    </form>\n");
