@@ -105,7 +105,7 @@
             <h3 class="menu-headings">List Your Property</h3>
             <div class="row">
                 <div class="large-8 large-centered columns">
-                    <form action="" method="post" name="listForm" autocomplete="off" onsubmit="return ValidateForm()">
+                    <form action="doListing.jsp" method="post" name="listForm" autocomplete="off" onsubmit="return validateForm()">
                         <fieldset>
                             <label class="labels">Title</label>
                             <input type="text" name="title" placeholder="Property Title">
