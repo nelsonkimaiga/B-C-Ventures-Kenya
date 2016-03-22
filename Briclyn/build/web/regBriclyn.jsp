@@ -51,6 +51,7 @@
         <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    </head>    
     <body>
         <div class="top-bar">
             <div class="top-bar-left">
