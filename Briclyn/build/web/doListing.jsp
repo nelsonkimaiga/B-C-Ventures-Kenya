@@ -28,12 +28,10 @@
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
                 Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
                 sqlInsertlist_requirement = "INSERT into list_requirement VALUES('"+title+"','"+type+"','"+proptype+"','"+region+"', '"+city+"', '"+area+"', '"+address+"', '"+price+"')" ;
-                Statement st = conn.createStatement();
                 Statement stList=null;
-	stList = conn.createStatement();
+                stList = conn.createStatement();
                 //change type of Resultset
                 boolean rs;
-                rs = st.execute(sqlInsertlist_requirement);
                 stList.executeUpdate(sqlInsertlist_requirement);
 //                response.sendRedirect("dashboard.html");
  
