@@ -46,14 +46,38 @@
                 </ul>
             </div>
         </div>
+        <br>
         <div class="container">
             <div class="row">
-                <div class="large-9 large-centered columns">
+                <div class="large-12 large-centered columns">
                     <form action="" method="post" name="searchForm">
-                        <fieldset>
-                            <label>Where do You want to Live?</label>
-                            <input type="text" name="place" placeholder="Where do you want to live?">
-                        </fieldset>
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <fieldset>
+                                    <label class="labels">Where do You want to Live?</label>
+                                    <input type="text" name="place" placeholder="Where do you want to live?">
+                                </fieldset>
+                            </div>
+                            <div class="large-4 columns">
+                                <fieldset>
+                                    <label class="labels">Property Type</label>
+                                    <select name="propertytype">
+                                        <option value="default" selected disabled>Choose a property type</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="House">House</option>
+                                        <option value="Land">Land</option>
+                                        <option value="Commercial">Commercial</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="large-4 columns">
+                                <fieldset>
+                                    <label class="labels">Where do You want to Live?</label>
+                                    <input type="text" name="place" placeholder="Where do you want to live?">
+                                </fieldset>
+                            </div>
+                            <button type="submit" class="button primary"><i class="fi-magnifying-glass">Search</i></button>
+                        </div>
                     </form>
                 </div>
             </div>
