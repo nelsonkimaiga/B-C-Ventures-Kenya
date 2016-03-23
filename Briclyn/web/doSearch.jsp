@@ -24,6 +24,30 @@
         <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+                        <!-- form validation -->
+        <script type="text/javascript">
+            function validateForm() {
+                var a = document.forms["searchForm"]["place"].value;
+                var b = document.forms["searchForm"]["propertytype"].value;
+                var c = document.forms["searchForm"]["price"].value;
+
+                if (a == null || a == "") {
+                    alert("Place must be filled out");
+                    return false;
+                }
+
+                if (b == null || b == "") {
+                    alert("Property type must be filled out");
+                    return false;
+                }
+                
+                if (c == null || c == "") {
+                    alert("Price type must be filled out");
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </head>
     <body>
          <div class="top-bar">
@@ -47,10 +71,10 @@
             </div>
         </div>
         <br>
-        <div class="container">
+        <div class="container large-12 medium-12 small-12 columns">
             <div class="row">
                 <div class="large-12 large-centered columns">
-                    <form action="" method="post" name="searchForm">
+                    <form action="" method="post" name="searchForm" onsubmit="return validateForm()">
                         <div class="row">
                             <div class="large-4 columns">
                                 <fieldset>
@@ -72,8 +96,8 @@
                             </div>
                             <div class="large-4 columns">
                                 <fieldset>
-                                    <label class="labels">Where do You want to Live?</label>
-                                    <input type="text" name="place" placeholder="Where do you want to live?">
+                                    <label class="labels">Price</label>
+                                    <input type="text" name="price" placeholder="Price">
                                 </fieldset>
                             </div>
                             <button type="submit" class="button primary"><i class="fi-magnifying-glass">Search</i></button>
