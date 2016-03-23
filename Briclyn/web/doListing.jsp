@@ -37,9 +37,7 @@
  
             } catch (ClassNotFoundException ex){
                 ex.printStackTrace();
-                request.setAttribute("error","<span class='sSError'>&nbsp; Registration is not successful, May be User ID already Exists &nbsp; </span>");
-                RequestDispatcher dispatch = request.getRequestDispatcher("/register.jsp");
-                dispatch.forward(request, response);
+		response.sendRedirect("create-listing.jsp");
             }
 
 
@@ -65,6 +63,29 @@
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     </head>    
     <body>
-        <h1>Hello World!</h1>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Briclyn Kenya</li>
+                    <li></li>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="register.jsp">Register</a></li>
+                    <li><a href="#">List Your Property</a></li>
+                    <li><a href="#">Post Your Requirement</a></li>
+                    <li><a href="login.jsp">Login</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><input type="search" placeholder="Search"></li>
+                    <li><button type="button" class="button">Search</button></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <p>Property Listing is saved successfully!</p>
+        </div>
     </body>
 </html>
