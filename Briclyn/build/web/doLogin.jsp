@@ -33,7 +33,7 @@
 			  response.sendRedirect("login.jsp?error="+message);
 			}                
             } catch (ClassNotFoundException ex) {
-                
+                ex.printStackTrace();
             }
             
 %>

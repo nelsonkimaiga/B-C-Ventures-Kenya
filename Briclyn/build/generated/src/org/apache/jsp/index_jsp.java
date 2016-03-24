@@ -3,13 +3,76 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.text.SimpleDateFormat;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
+
+public String nullconv(String str)
+	 {	
+	 	if(str==null)
+	 		str="";
+	 	else if(str.equals("null"))
+	 		str="";
+	 	else if((str.trim()).equals(""))
+	 		str="";
+	 	else if(str.equals(null))
+	 		str="";
+	 	else
+	 		str=str.trim();
+	 	return str;
+	 }
+	 
+	 public int nullIntconv(String inv)
+	{   
+		int conv=0;
+		if(inv==null)
+		{
+			inv="0";
+		}
+		else if((inv.trim()).equals("null"))
+		{
+			inv="0";
+		}
+		else if(inv.equals(""))
+		{
+			inv="0";
+		}
+		try{
+			conv=Integer.parseInt(inv);
+		}
+		catch(Exception e)
+		{}
+		return conv;
+	}
+	
+	String formatedDate="";
+	String formatedDatetemp="";
+    public String getDateFormat(java.util.Date sdate,String sFormat)
+	{
+		if(sdate==null)
+		{
+		 formatedDate="";
+		}
+		else
+		if(sFormat==null)
+		{
+		 formatedDate="";
+		}
+		else
+		formatedDatetemp=new SimpleDateFormat(sFormat).format(sdate);
+	return formatedDatetemp;
+	}
+
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/function.jsp");
+  }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -43,6 +106,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write('\n');
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
@@ -95,16 +164,31 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <li class=\"menu-text\">Briclyn Kenya</li>\n");
       out.write("                    <li></li>\n");
       out.write("                    <li><a href=\"index.jsp\">Home</a></li>\n");
-      out.write("                    <li><a href=\"#\">Search</a></li>\n");
+      out.write("                    <li><a href=\"\">Search</a></li>\n");
       out.write("                    <li><a href=\"register.jsp\">Register</a></li>\n");
       out.write("                    <li><a href=\"create-listing.jsp\">List Your Property</a></li>\n");
-      out.write("                    <li><a href=\"#\">Post Your Requirement</a></li>\n");
+      out.write("                    <li><a href=\"\">Post Your Requirement</a></li>\n");
       out.write("                    <li><a href=\"login.jsp\">Login</a></li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"top-bar-right\">\n");
       out.write("                <ul class=\"menu\">\n");
-      out.write("                    <li><input type=\"search\" placeholder=\"Search\"></li>\n");
+      out.write("                    <li>\n");
+      out.write("                        <p>\n");
+      out.write("                        ");
+
+                            String status="Log in";
+                            String fileCall="login.jsp";
+                            String sSessonUserID=nullconv((String)session.getAttribute("username"));
+                            if(!(sSessonUserID).equals("")) {
+                                status="Logout";
+                                fileCall="logout.jsp";
+                                sSessonUserID="Hi!  "+nullconv((String)session.getAttribute("username"));
+    }
+                        
+      out.write("\n");
+      out.write("                        </p>\n");
+      out.write("                    </li>\n");
       out.write("                    <li><button type=\"button\" class=\"button\">Search</button></li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
