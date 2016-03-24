@@ -107,13 +107,13 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"container\">\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <div class=\"large-6 large-centered columns\">\n");
-      out.write("                    <form action=\"\" method=\"POST\" name=\"loginForm\" autocomplete=\"off\" onsubmit=\"return validateForm()\">\n");
+      out.write("                    <form action=\"doLogin.jsp\" method=\"POST\" name=\"loginForm\" autocomplete=\"off\" onsubmit=\"return validateForm()\">\n");
       out.write("                        <fieldset>\n");
-      out.write("                            <label>Username</label>\n");
+      out.write("                            <label class=\"labels\">Username</label>\n");
       out.write("                            <input type=\"text\" name=\"username\" autocomplete=\"off\" placeholder=\"Username\">\n");
       out.write("                        </fieldset>\n");
       out.write("                        <fieldset>\n");
-      out.write("                            <label>Password</label>\n");
+      out.write("                            <label class=\"labels\">Password</label>\n");
       out.write("                            <input type=\"password\" name=\"password\" autocomplete=\"off\" placeholder=\"Password\">\n");
       out.write("                        </fieldset>\n");
       out.write("                        <button type=\"submit\" class=\"button primary\">Login</button>\n");
@@ -122,7 +122,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <p><a href=\"#\">Forgot Password?</a></p>\n");
       out.write("                            </div>\n");
       out.write("                            <div class=\"large-6 small-12 columns\">\n");
-      out.write("                                <p><a href=\"#\">New User</a></p>\n");
+      out.write("                                <p><a href=\"register.jsp\">New User?</a></p>\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
       out.write("                    </form>\n");

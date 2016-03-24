@@ -68,13 +68,13 @@
         <div class="container">
             <div class="row">
                 <div class="large-6 large-centered columns">
-                    <form action="" method="POST" name="loginForm" autocomplete="off" onsubmit="return validateForm()">
+                    <form action="doLogin.jsp" method="POST" name="loginForm" autocomplete="off" onsubmit="return validateForm()">
                         <fieldset>
-                            <label>Username</label>
+                            <label class="labels">Username</label>
                             <input type="text" name="username" autocomplete="off" placeholder="Username">
                         </fieldset>
                         <fieldset>
-                            <label>Password</label>
+                            <label class="labels">Password</label>
                             <input type="password" name="password" autocomplete="off" placeholder="Password">
                         </fieldset>
                         <button type="submit" class="button primary">Login</button>
@@ -83,7 +83,7 @@
                                 <p><a href="#">Forgot Password?</a></p>
                             </div>
                             <div class="large-6 small-12 columns">
-                                <p><a href="#">New User</a></p>
+                                <p><a href="register.jsp">New User?</a></p>
                             </div>
                         </div>
                     </form>
