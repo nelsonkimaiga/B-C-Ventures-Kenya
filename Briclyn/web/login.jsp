@@ -49,11 +49,12 @@
                 <ul class="dropdown menu" data-dropdown-menu>
                     <li class="menu-text">Briclyn Kenya</li>
                     <li></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Search</a></li>
+                    <li><a href="login.jsp">Home</a></li>
+                    <li><a href="">Search</a></li>
                     <li><a href="#">Register</a></li>
                     <li><a href="#">List Your Property</a></li>
                     <li><a href="#">Post Your Requirement</a></li>
+                    
                     <li><a href="#">Login</a></li>
                 </ul>
             </div>

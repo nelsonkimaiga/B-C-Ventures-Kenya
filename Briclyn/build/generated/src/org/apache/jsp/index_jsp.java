@@ -112,6 +112,18 @@ public String nullconv(String str)
       out.write("\n");
       out.write("\n");
       out.write('\n');
+      out.write('\n');
+
+String status="Login";
+String fileCall="login.jsp";
+String usersessionid=nullconv((String)session.getAttribute("username"));
+if(!(usersessionid).equals(""))
+{
+status="Logout";
+fileCall="logout.jsp";
+usersessionid="Hi!  "+nullconv((String)session.getAttribute("username"));
+}
+
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
@@ -165,30 +177,33 @@ public String nullconv(String str)
       out.write("                    <li></li>\n");
       out.write("                    <li><a href=\"index.jsp\">Home</a></li>\n");
       out.write("                    <li><a href=\"\">Search</a></li>\n");
+      out.write("                    ");
+
+if(usersessionid.equals(""))
+{
+
+      out.write("\n");
       out.write("                    <li><a href=\"register.jsp\">Register</a></li>\n");
+      out.write("                    ");
+
+}
+
+      out.write("\n");
       out.write("                    <li><a href=\"create-listing.jsp\">List Your Property</a></li>\n");
-      out.write("                    <li><a href=\"\">Post Your Requirement</a></li>\n");
+      out.write("                    <li><a href=\"create-posting.jsp\">Post Your Requirement</a></li>\n");
+      out.write("                    <li><a href=\"");
+      out.print(fileCall);
+      out.write("\"><span>");
+      out.print(usersessionid);
+      out.write(' ');
+      out.print(status);
+      out.write("</span></a></li>\n");
       out.write("                    <li><a href=\"login.jsp\">Login</a></li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"top-bar-right\">\n");
       out.write("                <ul class=\"menu\">\n");
-      out.write("                    <li>\n");
-      out.write("                        <p>\n");
-      out.write("                        ");
-
-                            String status="Log in";
-                            String fileCall="login.jsp";
-                            String sSessonUserID=nullconv((String)session.getAttribute("username"));
-                            if(!(sSessonUserID).equals("")) {
-                                status="Logout";
-                                fileCall="logout.jsp";
-                                sSessonUserID="Hi!  "+nullconv((String)session.getAttribute("username"));
-    }
-                        
-      out.write("\n");
-      out.write("                        </p>\n");
-      out.write("                    </li>\n");
+      out.write("                    <li><input type=\"search\" placeholder=\"Search\"></li>\n");
       out.write("                    <li><button type=\"button\" class=\"button\">Search</button></li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");

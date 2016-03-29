@@ -4,7 +4,19 @@
     Author     : kimaiga
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
+<%@include file="function.jsp"%>
+<%
+String status="Login";
+String fileCall="login.jsp";
+String usersessionid=nullconv((String)session.getAttribute("username"));
+if(!(usersessionid).equals(""))
+{
+status="Logout";
+fileCall="logout.jsp";
+usersessionid="Hi!  "+nullconv((String)session.getAttribute("username"));
+}
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,9 +69,17 @@
                     <li></li>
                     <li><a href="index.jsp">Home</a></li>
                     <li><a href="">Search</a></li>
+                    <%
+if(usersessionid.equals(""))
+{
+%>
                     <li><a href="register.jsp">Register</a></li>
+                    <%
+}
+%>
                     <li><a href="create-listing.jsp">List Your Property</a></li>
-                    <li><a href="">Post Your Requirement</a></li>
+                    <li><a href="create-posting.jsp">Post Your Requirement</a></li>
+                    <li><a href="<%=fileCall%>"><span><%=usersessionid%> <%=status%></span></a></li>
                     <li><a href="login.jsp">Login</a></li>
                 </ul>
             </div>
