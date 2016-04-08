@@ -31,6 +31,22 @@
 			{
 			  message="No user or password matched" ;
 			  response.sendRedirect("login.jsp?error="+message);
+			}
+			try{
+				 if(st!=null){
+					 st.close();
+				 }
+				 if(rs!=null){
+					 rs.close();
+				 }
+				 
+				 if(conn!=null){
+				  conn.close();
+				 }
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
 			}                
             } catch (ClassNotFoundException ex) {
                 ex.printStackTrace();
