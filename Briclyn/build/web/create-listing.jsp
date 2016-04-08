@@ -4,7 +4,8 @@
     Author     : kimaiga
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*,java.text.*,java.util.*" errorPage="" %>
+<%@ include file="sessionchk.jsp"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -98,13 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="large-4 columns" id="profile">
-                    <h2 id="profileheading">My Account</h2>
-                    <ul id="sidenav">
-                        <li><a href="">My Profile</a></li>
-                        <li><a href="">Listings</a></li>
-                        <li><a href="">Messages</a></li>
-                        <li><a href="">Change Password</a></li>
-                    </ul>
+                    <%@include file="menu.jsp"%>
                 </div>                
                 <div class="large-8 columns">
                     <h3 class="menu-headings">List Your Property</h3>

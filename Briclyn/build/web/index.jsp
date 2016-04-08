@@ -80,7 +80,6 @@ if(usersessionid.equals(""))
                     <li><a href="create-listing.jsp">List Your Property</a></li>
                     <li><a href="create-posting.jsp">Post Your Requirement</a></li>
                     <li><a href="<%=fileCall%>"><span><%=usersessionid%> <%=status%></span></a></li>
-                    <li><a href="login.jsp">Login</a></li>
                 </ul>
             </div>
         </div>
