@@ -3,13 +3,83 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.*;
+import java.text.*;
+import java.util.*;
+import java.sql.*;
+import java.sql.*;
+import java.text.SimpleDateFormat;
 
 public final class create_002dlisting_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
+
+public String nullconv(String str)
+	 {	
+	 	if(str==null)
+	 		str="";
+	 	else if(str.equals("null"))
+	 		str="";
+	 	else if((str.trim()).equals(""))
+	 		str="";
+	 	else if(str.equals(null))
+	 		str="";
+	 	else
+	 		str=str.trim();
+	 	return str;
+	 }
+	 
+	 public int nullIntconv(String inv)
+	{   
+		int conv=0;
+		if(inv==null)
+		{
+			inv="0";
+		}
+		else if((inv.trim()).equals("null"))
+		{
+			inv="0";
+		}
+		else if(inv.equals(""))
+		{
+			inv="0";
+		}
+		try{
+			conv=Integer.parseInt(inv);
+		}
+		catch(Exception e)
+		{}
+		return conv;
+	}
+	
+	String formatedDate="";
+	String formatedDatetemp="";
+    public String getDateFormat(java.util.Date sdate,String sFormat)
+	{
+		if(sdate==null)
+		{
+		 formatedDate="";
+		}
+		else
+		if(sFormat==null)
+		{
+		 formatedDate="";
+		}
+		else
+		formatedDatetemp=new SimpleDateFormat(sFormat).format(sdate);
+	return formatedDatetemp;
+	}
+
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(3);
+    _jspx_dependants.add("/sessionchk.jsp");
+    _jspx_dependants.add("/doLogin.jsp");
+    _jspx_dependants.add("/function.jsp");
+  }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -32,7 +102,7 @@ public final class create_002dlisting_jsp extends org.apache.jasper.runtime.Http
     try {
       response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
-      			null, true, 8192, true);
+      			"", true, 8192, true);
       _jspx_page_context = pageContext;
       application = pageContext.getServletContext();
       config = pageContext.getServletConfig();
@@ -43,6 +113,77 @@ public final class create_002dlisting_jsp extends org.apache.jasper.runtime.Http
 
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write('\n');
+      out.write('\n');
+
+    String user = nullconv(request.getParameter("username"));
+    String pass = nullconv(request.getParameter("password"));
+    
+    String message="User login successfully ";
+    String loginYes="";
+    
+            try {
+                //attempt to authenticate user
+                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
+                String query = "SELECT * FROM registration WHERE username='"+user+"'and password ='"+pass+"'";
+                Statement st = conn.createStatement(); 
+                ResultSet rs = st.executeQuery(query);
+                if (rs.next()) {
+                    
+			  loginYes="yes";
+			  session.setAttribute("username",rs.getString("username"));
+			  session.setAttribute("username",rs.getString("name"));
+			  response.sendRedirect("index.jsp");
+                } 
+			else
+			{
+			  message="No user or password matched" ;
+			  response.sendRedirect("login.jsp?error="+message);
+			}
+			try{
+				 if(st!=null){
+					 st.close();
+				 }
+				 if(rs!=null){
+					 rs.close();
+				 }
+				 
+				 if(conn!=null){
+				  conn.close();
+				 }
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}                
+            } catch (ClassNotFoundException ex) {
+                ex.printStackTrace();
+            }
+            
+
+      out.write('\n');
+      out.write('\n');
+      out.write('\n');
+  
+	if((nullconv((String)session.getAttribute("username")).equals("")))
+	{
+	  response.sendRedirect("login.jsp");
+	  return;
+	 }
+
+      out.write('\n');
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
@@ -132,18 +273,16 @@ public final class create_002dlisting_jsp extends org.apache.jasper.runtime.Http
       out.write("                    <li><a href=\"login.jsp\">Login</a></li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
-      out.write("            <div class=\"top-bar-right\">\n");
-      out.write("                <ul class=\"menu\">\n");
-      out.write("                    <li><input type=\"search\" placeholder=\"Search\"></li>\n");
-      out.write("                    <li><button type=\"button\" class=\"button\">Search</button></li>\n");
-      out.write("                </ul>\n");
-      out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <br>\n");
       out.write("        <div class=\"container\">\n");
-      out.write("            <h3 class=\"menu-headings\">List Your Property</h3>\n");
       out.write("            <div class=\"row\">\n");
-      out.write("                <div class=\"large-8 large-centered columns\">\n");
+      out.write("                <div class=\"large-4 columns\" id=\"profile\">\n");
+      out.write("                    ");
+      out.write("\n");
+      out.write("                </div>                \n");
+      out.write("                <div class=\"large-8 columns\">\n");
+      out.write("                    <h3 class=\"menu-headings\">List Your Property</h3>\n");
       out.write("                    <form action=\"doListing.jsp\" method=\"post\" name=\"listForm\" autocomplete=\"off\" onsubmit=\"return validateForm()\">\n");
       out.write("                        <fieldset>\n");
       out.write("                            <label class=\"labels\">Title</label>\n");

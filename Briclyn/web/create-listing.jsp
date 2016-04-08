@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*,java.text.*,java.util.*" errorPage="" %>
-<%@ include file="sessionchk.jsp"%>
+<%--<%@ include file="sessionchk.jsp"%>--%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -99,7 +99,7 @@
         <div class="container">
             <div class="row">
                 <div class="large-4 columns" id="profile">
-                    <%@include file="menu.jsp"%>
+                    <%--<%@include file="menu.jsp"%>--%>
                 </div>                
                 <div class="large-8 columns">
                     <h3 class="menu-headings">List Your Property</h3>

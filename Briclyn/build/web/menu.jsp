@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="sessionchk.jsp"%>
+<%@ include file="doLogin.jsp"%>
 <%
 String sUserType=nullconv((String)session.getAttribute("username"));
 String sPending="";
