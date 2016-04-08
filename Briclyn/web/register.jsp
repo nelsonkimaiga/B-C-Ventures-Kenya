@@ -76,23 +76,31 @@
                 <div class="large-6 large-centered columns">
                     <form action="regBriclyn.jsp" method="POST" name="registrationForm" onsubmit="return validateForm()">
                         <fieldset>
-                            <label>Full Names*</label>
+                            <label class="labels">User Type</label>
+                            <select name="usertype">
+                                <option value="default" selected>Choose a user type</option>
+                                <option value="1">Individual User</option>
+                                <option value="2">Agent/Brokers</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <label class="labels">Full Names*</label>
                             <input type="text" name="names" placeholder="Full Names" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Email Address*</label>
+                            <label class="labels">Email Address*</label>
                             <input type="email" name="email" placeholder="Email" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Phone Number</label>
+                            <label class="labels">Phone Number</label>
                             <input type="number" name="phonenumber" placeholder="Phone Number" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Username*</label>
+                            <label class="labels">Username*</label>
                             <input type="text" name="username" placeholder="Username" autocomplete="off">
                         </fieldset>
                         <fieldset>
-                            <label>Password*</label>
+                            <label class="labels">Password*</label>
                             <input type="password" name="password" placeholder="Password" autocomplete="off"> 
                         </fieldset>
                         <button type="submit" class="button success">Register</button>
