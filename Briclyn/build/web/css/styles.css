@@ -406,3 +406,28 @@ p {
     text-align: center
         
 }
+
+#sidenav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+#sidenav a {
+    display: block;
+    width: 200px;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+li a:hover{
+    background-color: #555;
+    color: #fff;
+}
+
+#profile{
+    margin-top: 50px;
+}

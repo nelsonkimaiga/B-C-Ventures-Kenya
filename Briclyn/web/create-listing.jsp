@@ -102,9 +102,18 @@
         </div>
         <br>
         <div class="container">
-            <h3 class="menu-headings">List Your Property</h3>
             <div class="row">
-                <div class="large-8 large-centered columns">
+                <div class="large-4 columns" id="profile">
+                    <label id="profileheading">My Profile</label>
+                    <ul id="sidenav">
+                        <li><a href="">My Profile</a></li>
+                        <li><a href="">Listings</a></li>
+                        <li><a href="">Messages</a></li>
+                        <li><a href="">Change Password</a></li>
+                    </ul>
+                </div>                
+                <div class="large-8 columns">
+                    <h3 class="menu-headings">List Your Property</h3>
                     <form action="doListing.jsp" method="post" name="listForm" autocomplete="off" onsubmit="return validateForm()">
                         <fieldset>
                             <label class="labels">Title</label>
