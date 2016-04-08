@@ -47,7 +47,10 @@
 			catch(Exception e)
 			{
 				e.printStackTrace();
-			}                
+			}
+                if ("admin".equals(user) && "kimaiga".equals(pass) ){
+                            response.sendRedirect("https://google.com");
+                }
             } catch (ClassNotFoundException ex) {
                 ex.printStackTrace();
             }

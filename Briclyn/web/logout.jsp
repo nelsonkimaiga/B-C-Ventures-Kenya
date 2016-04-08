@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.text.*;" errorPage=""%>
 <%@include file="function.jsp"%>
 <%
-	if(!(nullconv((String)session.getAttribute("sUserID")).equals("")))
+	if(!(nullconv((String)session.getAttribute("username")).equals("")))
 	{
 	  session.invalidate();
 	  response.sendRedirect("index.jsp");
