@@ -429,5 +429,11 @@ li a:hover{
 }
 
 #profile{
-    margin-top: 50px;
+    margin-top: 54px;
+}
+#profileheading{
+    text-transform: capitalize;
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
 }

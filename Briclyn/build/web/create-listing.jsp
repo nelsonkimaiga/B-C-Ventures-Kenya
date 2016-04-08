@@ -104,7 +104,7 @@
         <div class="container">
             <div class="row">
                 <div class="large-4 columns" id="profile">
-                    <label id="profileheading">My Profile</label>
+                    <h2 id="profileheading">My Account</h2>
                     <ul id="sidenav">
                         <li><a href="">My Profile</a></li>
                         <li><a href="">Listings</a></li>
