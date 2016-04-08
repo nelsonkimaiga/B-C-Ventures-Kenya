@@ -83,12 +83,6 @@ if(usersessionid.equals(""))
                     <li><a href="login.jsp">Login</a></li>
                 </ul>
             </div>
-            <div class="top-bar-right">
-                <ul class="menu">
-                    <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
-                </ul>
-            </div>
         </div>
     <br>
         <div class="container">
