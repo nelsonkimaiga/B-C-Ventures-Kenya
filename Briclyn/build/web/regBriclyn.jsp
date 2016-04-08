@@ -1,6 +1,7 @@
 <%@page import="scripts.DbConn"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" errorPage=""%>
 <%
+    String usertype = request.getParameter("usertype");
     String name = request.getParameter("names");
     String email = request.getParameter("email");
     String contacts = request.getParameter("phonenumber");
@@ -8,7 +9,7 @@
     String password = request.getParameter("password");
 
         
-        if ("".equals(username) || "".equals(name) || "".equals(email) || "".equals(contacts) || "".equals(username) || "".equals(password)){
+        if ("".equals(usertype) ||"".equals(username) || "".equals(name) || "".equals(email) || "".equals(contacts) || "".equals(username) || "".equals(password)){
         //redirect to error page
         response.sendRedirect("error.jsp");
         } else{
@@ -16,7 +17,7 @@
                 //attempt to save data
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
                 Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
-                String sql = "INSERT into registration VALUES('"+name+"','"+email+"','"+contacts+"','"+username+"', '"+password+"')" ;
+                String sql = "INSERT into registration VALUES('"+usertype+"','"+name+"','"+email+"','"+contacts+"','"+username+"', '"+password+"')" ;
                 Statement st = conn.createStatement();
                 //change type of Resultset
                 boolean rs;
