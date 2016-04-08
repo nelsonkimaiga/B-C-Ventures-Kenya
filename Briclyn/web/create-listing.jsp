@@ -4,8 +4,7 @@
     Author     : kimaiga
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*,java.text.*,java.util.*" errorPage="" %>
-<%--<%@ include file="sessionchk.jsp"%>--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -99,7 +98,13 @@
         <div class="container">
             <div class="row">
                 <div class="large-4 columns" id="profile">
-                    <%--<%@include file="menu.jsp"%>--%>
+                    <h2 id="profileheading">My Account</h2>
+                    <ul id="sidenav">
+                        <li><a href="">My Profile</a></li>
+                        <li><a href="">Listings</a></li>
+                        <li><a href="">Messages</a></li>
+                        <li><a href="">Change Password</a></li>
+                    </ul>
                 </div>                
                 <div class="large-8 columns">
                     <h3 class="menu-headings">List Your Property</h3>
@@ -109,7 +114,7 @@
                             <input type="text" name="title" placeholder="Property Title">
                         </fieldset>
                         <fieldset>
-                            <label>Transaction type (E.g Sale or rent?</label>
+                            <label class="menu-headings">Transaction type (E.g Sale or rent?</label>
                             <select name="type">
                                 <option value="default" selected disabled>Select a transaction type</option>
                                 <option value="Rent">Rent</option>

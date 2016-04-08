@@ -5,13 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="doLogin.jsp"%>
+<%@ include file="sessionchk.jsp"%>
 <%
-String sUserType=nullconv((String)session.getAttribute("username"));
+String usertype=nullconv((String)session.getAttribute("username"));
 String sPending="";
-if(!(sUserType).equals(""))
+if(!(usertype).equals(""))
 {
-  if(sUserType.equalsIgnoreCase("1"))
+  if(usertype.equalsIgnoreCase("1"))
   {
    %>
    
@@ -47,7 +47,7 @@ if(!(sUserType).equals(""))
            <li><a href="doSearchPost.jsp">Search Post</a></li>
        </ul>
        <%}
-else if(sUserType.equalsIgnoreCase("2"))
+else if(usertype.equalsIgnoreCase("2"))
 {
        %>
    
@@ -84,7 +84,7 @@ else if(sUserType.equalsIgnoreCase("2"))
        </ul>
   <%
   }
-  else if(sUserType.equalsIgnoreCase("3"))
+  else if(usertype.equalsIgnoreCase("3"))
   {
   %>
    
