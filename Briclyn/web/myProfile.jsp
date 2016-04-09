@@ -26,6 +26,35 @@
         <!--foundation icons cdn-->
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel="stylesheet" type="text/css">
         <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+        <script type="text/javascript">
+            function validateForm() {
+                var u = document.forms["registrationForm"]["names"].value;
+                var v = document.forms["registrationForm"]["email"].value;
+                var w = document.forms["registrationForm"]["phonenumber"].value;
+
+                if (u == null || u == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                if (v == null || v == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                
+                if (w == null || w == "") {
+                    alert("Username must be filled out");
+                    return false;
+                }
+                
+                return true;
+                
+        var chge="Are you sure to Modify!";
+        if(confirm(chge)==false) {  
+	   return false;
+       }
+            }
+        </script>
     </head>
     <body>
         <!--dynamic navbar-->
@@ -46,7 +75,7 @@
                 </div>                
                 <div class="large-7 columns">
                     <h3 class="menu-headings">Edit your information</h3>
-                    <form action="regBriclyn.jsp" method="POST" name="registrationForm" onsubmit="return validateForm()">
+                    <form action="editProfile.jsp" method="POST" name="registrationForm" onsubmit="return validateForm()">
                         <fieldset>
                             <label class="labels">Full Names*</label>
                             <%
@@ -71,14 +100,25 @@
                                 ResultSet rs = st.executeQuery(query);
                                 while(rs.next()){
                             %>
-                            <input type="email" name="email" placeholder="Email" value="<%rs.getString("email")%>" autocomplete="off">
+                            <input type="email" name="email" placeholder="Email" value="<%=rs.getString("email")%>" autocomplete="off">
                                                         <%}
                             %> 
                         </fieldset>
                         <fieldset>
                             <label class="labels">Phone Number</label>
-                            <input type="text" name="phonenumber" placeholder="Phone Number" value="" autocomplete="off">
+                            <%
+                                Class.forName("com.mysql.jdbc.Driver").newInstance();
+                                Connection conn2 = DriverManager.getConnection( "jdbc:mysql://localhost:3306/briclyn","root","303seminarian");
+                                String query2 = "SELECT phonenumber from registration WHERE name = '"+session.getAttribute("username")+"'";
+                                Statement st2 = conn2.createStatement();
+                                ResultSet rs2 = st2.executeQuery(query2);
+                                while(rs2.next()){
+                            %>
+                            <input type="text" name="phonenumber" placeholder="Phone Number" value="<%=rs2.getString("phonenumber")%>" autocomplete="off">
+                                                        <%}
+                            %>
                         </fieldset>
+                        <button class="button secondary">Edit Profile Details</button>
                     </form>
                 </div>
             </div>
