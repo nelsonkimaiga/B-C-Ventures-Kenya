@@ -6,18 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.text.*"%>
 <%@page import="scripts.DbConn" %>
-<%--<%@include file="function.jsp"%>--%>
-<%
-//String status="Login";
-//String fileCall="login.jsp";
-//String usersessionid=nullconv((String)session.getAttribute("username"));
-//if(!(usersessionid).equals(""))
-//{
-//status="Logout";
-//fileCall="logout.jsp";
-//usersessionid="Hi!  "+nullconv((String)session.getAttribute("username"));
-//}
-%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -63,21 +51,8 @@
         </script>
     </head>
     <body>
-<!--        <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">Briclyn Kenya</li>
-                    <li></li>
-                    <li><a href="index.jsp">Home</a></li>
-                    <li><a href="">Search</a></li>
-                    <li><a href="register.jsp">Register</a></li>
-                    <li><a href="create-listing.jsp">List Your Property</a></li>
-                    <li><a href="create-posting.jsp">Post Your Requirement</a></li>
-                    <li><a href=""><span>< </span></a></li>
-                </ul>
-            </div>
-        </div>-->
-<%@include file="navbar.jsp"%>
+        <!--dynamic navbar-->
+        <%@include file="navbar.jsp"%>
     <br>
         <div class="container">
             <form action="" method="get" name="searchForm" onsubmit="return validateForm()">
@@ -105,8 +80,6 @@
                 </div>
                 <button type="submit" class="button success"><i class="fi-magnifying-glass">Search</i></button>
             </form>
-        </div>
-    
-    
+        </div>    
     </body>
 </html>
