@@ -48,11 +48,6 @@
                 }
                 
                 return true;
-                
-        var chge="Are you sure to Modify!";
-        if(confirm(chge)==false) {  
-	   return false;
-       }
             }
         </script>
     </head>
@@ -118,7 +113,7 @@
                                                         <%}
                             %>
                         </fieldset>
-                        <button class="button secondary">Edit Profile Details</button>
+                        <button class="button secondary" type="submit">Edit Profile Details</button>
                     </form>
                 </div>
             </div>
