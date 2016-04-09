@@ -17,19 +17,18 @@
         usersessionid="Hi!  "+nullconv((String)session.getAttribute("username"));
     }
 %>
-<!--dynamic navbar starts here-->
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
             <li class="menu-text">Briclyn Kenya</li>
             <li></li>
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="">Search</a></li>
+            <li><a href="doSearch.jsp">Search</a></li>
              <%
                     if(usersessionid.equals(""))
                     {
              %>
-             <li><a href="register.jsp">Register</a></li>
+            <li><a href="register.jsp">Register</a></li>
              <%}
              %>
              <li><a href="create-listing.jsp">List Your Property</a></li>

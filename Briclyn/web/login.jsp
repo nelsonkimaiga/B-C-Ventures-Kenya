@@ -4,7 +4,7 @@
     Author     : kimaiga
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +13,7 @@
         <meta name="description" content="Real Estate">
         <!-- for-mobile-view -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>B&C Ventures|Home</title>
+        <title>Login</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="css/foundation.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -44,21 +44,8 @@
         </script>
     </head>
     <body>
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">Briclyn Kenya</li>
-                    <li></li>
-                    <li><a href="login.jsp">Home</a></li>
-                    <li><a href="">Search</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">List Your Property</a></li>
-                    <li><a href="#">Post Your Requirement</a></li>
-                    
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </div>
-        </div>
+        <!--dynamic navbar-->
+        <%@include file="navbar.jsp"%>
         <br>
         <div class="container">
             <div class="row">
