@@ -5,12 +5,12 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
-<%@include file="function.jsp"%>
+<%@include file="doLogin.jsp"%>
 <%
     String status="Login";
     String fileCall="login.jsp";
     String usersessionid=nullconv((String)session.getAttribute("username"));
-    if(!(usersessionid).equals(""))
+    if(!(usersessionid).equals(null))
     {
         status="Logout";
         fileCall="logout.jsp";

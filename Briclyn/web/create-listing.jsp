@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file="doLogin.jsp"%>
+<%String usersessionid=(String)session.getAttribute("username");%>
 <!DOCTYPE html>
 <html>
     <head>

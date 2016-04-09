@@ -6,6 +6,7 @@
 
 <%@page import="scripts.DbConn"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*" errorPage=""%>
+<%@ include file="sessionchk.jsp"%>
 <%
     String title = request.getParameter("title");
     String type = request.getParameter("type");
@@ -18,7 +19,7 @@
 
 	String sqlInsertlist_requirement=null;
 	
-	String sSessionUserID=(String)session.getAttribute("sUserID");
+	String usersessionid=(String)session.getAttribute("username");
 	
 	PreparedStatement psListApprovalOption=null;
 	ResultSet rsListApprovalOption=null;
