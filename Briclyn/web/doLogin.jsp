@@ -12,9 +12,12 @@
     
     String message="User login successfully ";
     String loginYes="";
-    if ("admin".equals(user) && "kimaiga".equals(pass) ){
-        response.sendRedirect("https://google.com");
+    //test for admin login credentials
+    if ("admin".equals(user) && "kimaiga".equals(pass)){
+        //redirect to admin user page
+        response.sendRedirect("admin.jsp");
     } else {
+        //login as a normal user
             try {
                 //attempt to authenticate user
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
