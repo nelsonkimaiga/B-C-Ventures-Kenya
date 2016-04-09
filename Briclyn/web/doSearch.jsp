@@ -4,7 +4,8 @@
     Author     : kimaiga
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
+<%@page import="scripts.DbConn" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +14,7 @@
         <meta name="description" content="Real Estate">
         <!-- for-mobile-view -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Create Listing</title>
+        <title>Search Property</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="css/foundation.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -50,26 +51,8 @@
         </script>
     </head>
     <body>
-         <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="dropdown menu" data-dropdown-menu>
-                    <li class="menu-text">Briclyn Kenya</li>
-                    <li></li>
-                    <li><a href="index.jsp">Home</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="register.jsp">Register</a></li>
-                    <li><a href="#">List Your Property</a></li>
-                    <li><a href="#">Post Your Requirement</a></li>
-                    <li><a href="login.jsp">Login</a></li>
-                </ul>
-            </div>
-            <div class="top-bar-right">
-                <ul class="menu">
-                    <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
-                </ul>
-            </div>
-        </div>
+        <!--dynamic navbar-->
+        <%@include file="navbar.jsp"%>
         <br>
         <div class="container large-12 medium-12 small-12 columns">
             <div class="row">

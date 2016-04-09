@@ -6,9 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*,java.text.*,java.util.*" errorPage=""%>
 <%@page import="scripts.DbConn" %>
-<%--<%@ include file="sessionchk.jsp"%>--%>
 <%@ include file="comman/header.jsp"%>
-<%	if((nullconv((String)session.getAttribute("username")).equals("")))
+<%	
+//    session checker
+    if((nullconv((String)session.getAttribute("username")).equals("")))
 	{
 	  response.sendRedirect("login.jsp");
 	  return;
@@ -96,7 +97,7 @@
                 <div class="large-4 columns" id="profile">
                     <h2 id="profileheading">My Account</h2>
                     <ul id="sidenav">
-                        <li><a href="">My Profile</a></li>
+                        <li><a href="myProfile.jsp">My Profile</a></li>
                         <li><a href="">Listings</a></li>
                         <li><a href="">Messages</a></li>
                         <li><a href="">Change Password</a></li>
