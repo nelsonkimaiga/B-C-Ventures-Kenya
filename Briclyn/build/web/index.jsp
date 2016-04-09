@@ -58,12 +58,12 @@
             <form action="" method="get" name="searchForm" onsubmit="return validateForm()">
                 <div class="row">
                     <div class="large-4 medium-12 small-12 columns">
-                        <label>Name of Location</label>
+                        <label class="labels">Name of Location</label>
                         <input type="text" name="location" autocomplete="off" placeholder="What is your location?">                    
                     </div>
                     <div class="large-4 medium-12 small-12 columns">
                         <fieldset>
-                            <label>Property Type</label>
+                            <label class="labels">Property Type</label>
                             <select name="propertytype">
                                 <option value="default" selected disabled>Property Type</option>
                                 <option value=""></option>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="large-4 medium-12 small-12 columns">
                         <fieldset>
-                            <label>Maximum Price</label>
+                            <label class="labels">Maximum Price</label>
                             <input type="text" name="price" placeholder="Maximum Price">
                         </fieldset>
                     </div>

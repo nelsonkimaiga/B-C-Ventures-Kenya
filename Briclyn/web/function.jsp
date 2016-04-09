@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.text.SimpleDateFormat"%>
+<%@ include file="comman/header.jsp"%>
 <%!
 public String nullconv(String str)
 	 {	
