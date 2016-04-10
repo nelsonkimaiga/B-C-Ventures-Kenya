@@ -63,7 +63,7 @@
                         out.println(x);%> - My Account</h2>
                     <ul id="sidenav">
                         <li><a href="myProfile.jsp">My Profile</a></li>
-                        <li><a href="">Listings</a></li>
+                        <li><a href="myList.jsp">Listings</a></li>
                         <li><a href="">Messages</a></li>
                         <li><a href="">Change Password</a></li>
                     </ul>

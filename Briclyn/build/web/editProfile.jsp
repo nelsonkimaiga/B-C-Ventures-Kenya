@@ -19,11 +19,11 @@
 	String sqlEditProfile=null;
 	
 	try{
-		sqlEditProfile="update registration set sRegEmail=?, sFirstName=?, sLastName=?, iDateBirth=?, sRegGender=?, iCityID=?, iLocation=?, iUserContact=?, sModifiedBy=?, sModifiedDate=sysdate() where sUserID=?";
+		sqlEditProfile="update registration set name=?, email=?, phonenumber=? where username='"+session.getAttribute("username")+"'";
 		psEditProfile=conn.prepareStatement(sqlEditProfile);
 		psEditProfile.setString(1,fullname);
 		psEditProfile.setString(2,email);
-		psEditProfile.setString(8,contact);
+		psEditProfile.setString(3,contact);
 		psEditProfile.executeUpdate();
 	}
 	catch(Exception e)
