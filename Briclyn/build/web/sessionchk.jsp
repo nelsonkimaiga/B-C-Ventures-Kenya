@@ -5,7 +5,7 @@
 --%>
 
 <%@ page contentType="text/html" language="java" import="java.sql.*" errorPage="" %>
-<%@ include file="doLogin.jsp"%>
+<%@ include file="function.jsp"%>
 
 <%  
 	if((nullconv((String)session.getAttribute("username")).equals("")))

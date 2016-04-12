@@ -8,8 +8,6 @@ import java.text.*;
 import java.util.*;
 import java.io.*;
 import scripts.DbConn;
-import java.text.SimpleDateFormat;
-import java.sql.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 
@@ -73,74 +71,16 @@ public String nullconv(String str)
 	return formatedDatetemp;
 	}
 
-
-public String nullconv(String str)
-	 {	
-	 	if(str==null)
-	 		str="";
-	 	else if(str.equals("null"))
-	 		str="";
-	 	else if((str.trim()).equals(""))
-	 		str="";
-	 	else if(str.equals(null))
-	 		str="";
-	 	else
-	 		str=str.trim();
-	 	return str;
-	 }
-	 
-	 public int nullIntconv(String inv)
-	{   
-		int conv=0;
-		if(inv==null)
-		{
-			inv="0";
-		}
-		else if((inv.trim()).equals("null"))
-		{
-			inv="0";
-		}
-		else if(inv.equals(""))
-		{
-			inv="0";
-		}
-		try{
-			conv=Integer.parseInt(inv);
-		}
-		catch(Exception e)
-		{}
-		return conv;
-	}
-	
-	String formatedDate="";
-	String formatedDatetemp="";
-    public String getDateFormat(java.util.Date sdate,String sFormat)
-	{
-		if(sdate==null)
-		{
-		 formatedDate="";
-		}
-		else
-		if(sFormat==null)
-		{
-		 formatedDate="";
-		}
-		else
-		formatedDatetemp=new SimpleDateFormat(sFormat).format(sdate);
-	return formatedDatetemp;
-	}
-
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
 
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(5);
-    _jspx_dependants.add("/function.jsp");
-    _jspx_dependants.add("/comman/header.jsp");
+    _jspx_dependants = new java.util.ArrayList<String>(4);
     _jspx_dependants.add("/menu.jsp");
     _jspx_dependants.add("/sessionchk.jsp");
-    _jspx_dependants.add("/doLogin.jsp");
+    _jspx_dependants.add("/function.jsp");
+    _jspx_dependants.add("/comman/header.jsp");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -177,85 +117,14 @@ public String nullconv(String str)
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write('\r');
       out.write('\n');
-      out.write('\n');
-      out.write('\n');
-
-    //session checker
-	if((nullconv((String)session.getAttribute("username")).equals("")))
+	
+//    session checker
+    if((nullconv((String)session.getAttribute("username")).equals("")))
 	{
 	  response.sendRedirect("login.jsp");
 	  return;
 	 }
-        
-
-	Connection conn=null;
-	conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
-	
-	ResultSet rsMyList=null;
-	PreparedStatement psMyList=null;
-	PreparedStatement psCurrency=null;
-	ResultSet rsCurrency=null;
-	
-	PreparedStatement psAppImage=null;
-	ResultSet rsAppImage=null;
-	
-	PreparedStatement psAppImageURL=null;
-	ResultSet rsAppImageURL=null;
-	
-	String sCurrency="";
-	
-	String sSUserID=nullconv((String)session.getAttribute("username"));
-	
-	String sApprovalOptionListImage="";
-	String sURLUploadImage="uLoad.jsp";
-	String sImageURL="";
-	
-	String img=null;
-	int imglen=0;
-	byte [] img_arr=null;
-	
-	try{
-		String sqlAppImage="SELECT cIsImageApprovalNeed FROM list_approval";
-		psAppImage=conn.prepareStatement(sqlAppImage);
-		rsAppImage=psAppImage.executeQuery();
-		if(rsAppImage.next())
-		{
-		  sApprovalOptionListImage=rsAppImage.getString("cIsImageApprovalNeed");
-		}
-	     
-		String sqlAppImageURL="SELECT iLAImageID, iListID, bImage FROM list_album where iListID=? and cStatus='A'";
-		psAppImageURL=conn.prepareStatement(sqlAppImageURL);
-		
-		String sqlMyList="SELECT l.iListID, l.title, l.type, l.propertytype, l.region," 
-		                 +" l.city, l.area, l.address," 
-						 +" l.dCreatedDate,c.iCityName,lc.iLocationName,r.sRegEmail,sFirstName, sLastName,iUserContact "
-						 +"   FROM list_requirement l "
-						 +"    left join citymaster c on c.iCityID=l.iCityID "
-						 +"	   left join locationmaster lc on lc.iLocationID=l.iLocalityID "
-						 +"    left join registration r on r.username=l.username "
-						 +"	   left join propertymaster p on p.iPropertyID=l.iPropertyID "
-						 +"          where l.cStatus='A' and l.username='"+nullconv(sSUserID)+"' order by l.dCreatedDate desc";
-		psMyList=conn.prepareStatement(sqlMyList);
-		rsMyList=psMyList.executeQuery();
-		
-		String sqlCurrency="SELECT sCurrencyName, sSymbol FROM currency b where sStatus='A'";
-		psCurrency=conn.prepareStatement(sqlCurrency);
-		rsCurrency=psCurrency.executeQuery();
-		if(rsCurrency.next())
-		{
-		  sCurrency=rsCurrency.getString("sSymbol");
-		}
-	}
-	catch(Exception e)
-	{
-		e.printStackTrace();
-	}
-
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
@@ -320,7 +189,7 @@ public String nullconv(String str)
       out.write("</script> \n");
       out.write("\n");
       out.write("    </head>\n");
-      out.write("    <script>\n");
+      out.write("    <script type=\"text/javascript\">\n");
       out.write("        fieldSName(\"iListID\",\"listForm\");\n");
       out.write("        </script>\n");
       out.write("    <body>\n");
@@ -335,66 +204,8 @@ public String nullconv(String str)
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
       out.write('\r');
       out.write('\n');
-      out.write('\n');
-      out.write('\n');
-
-    String user = nullconv(request.getParameter("username"));
-    String pass = nullconv(request.getParameter("password"));
-    
-    String message="User login successfully ";
-    String loginYes="";
-    //test for admin login credentials
-    if ("admin".equals(user) && "kimaiga".equals(pass)){
-        //redirect to admin user page
-        response.sendRedirect("admin.jsp");
-    } else {
-        //login as a normal user
-            try {
-                //attempt to authenticate user
-                Class.forName("com.mysql.jdbc.Driver").newInstance();
-                Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
-                String query = "SELECT * FROM registration WHERE username='"+user+"'and password ='"+pass+"'";
-                Statement st = conn.createStatement(); 
-                ResultSet rs = st.executeQuery(query);
-                if (rs.next()) {
-                    
-			  loginYes="yes";
-			  session.setAttribute("username",rs.getString("username"));
-			  session.setAttribute("username",rs.getString("name"));
-			  response.sendRedirect("index.jsp");
-                } 
-			else
-			{
-			  message="No user or password matched" ;
-			  response.sendRedirect("login.jsp?error="+message);
-			}
-			try{
-				 if(st!=null){
-					 st.close();
-				 }
-				 if(rs!=null){
-					 rs.close();
-				 }
-				 
-				 if(conn!=null){
-				  conn.close();
-				 }
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-            } catch (ClassNotFoundException ex) {
-                ex.printStackTrace();
-            }
-         }
-            
-
       out.write('\n');
       out.write('\n');
       out.write('\n');
@@ -511,11 +322,40 @@ else if(usertype.equalsIgnoreCase("2"))
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("        <br>\n");
       out.write("        <div class=\"container\">\n");
-      out.write("            \n");
-      out.write("            <form name=\"listForm\" action=\"\" method=\"\">\n");
-      out.write("                \n");
-      out.write("            </form>\n");
+      out.write("            <div class=\"row\">\n");
+      out.write("                <div class=\"large-4 columns\">\n");
+      out.write("                    \n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"large-8 columns\">\n");
+      out.write("                    <form name=\"listForm\" action=\"\" method=\"\" onsubmit=\"return goSubmitForm()\">\n");
+      out.write("                        <input type=\"hidden\" name=\"iPageID\" value=\"My\">\n");
+      out.write("                        \n");
+      out.write("                        <table class=\"stack\">\n");
+      out.write("                            <thead>\n");
+      out.write("                                <tr>\n");
+      out.write("                                    <th><input type=\"checkbox\" name=\"allCheck\" onClick=\"selectallMe()\" styleClass=\"ch\" /></th>\n");
+      out.write("                                    <th width=\"200\">Location</th>\n");
+      out.write("                                    <th width=\"200\">Specification</th>\n");
+      out.write("                                    <th width=\"150\">Price</th>\n");
+      out.write("                                    <th width=\"150\">Contact</th>\n");
+      out.write("                                </tr>\n");
+      out.write("                            </thead>\n");
+      out.write("                            <tbody>\n");
+      out.write("                                <tr>\n");
+      out.write("                                    <td></td>\n");
+      out.write("                                    <td></td>\n");
+      out.write("                                    <td></td>\n");
+      out.write("                                    <td</td>\n");
+      out.write("                                    <td></td>\n");
+      out.write("                                    <td></td>\n");
+      out.write("                                </tr>\n");
+      out.write("                            </tbody>\n");
+      out.write("                        </table>\n");
+      out.write("                    </form>\n");
+      out.write("                </div>    \n");
+      out.write("            </div>    \n");
       out.write("        </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");

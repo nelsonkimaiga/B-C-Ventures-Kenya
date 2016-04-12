@@ -6,79 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*,java.text.*,java.util.*,java.io.*" errorPage=""%>
 <%@page import="scripts.DbConn"%>
-<%@page import="scripts.DbConn"%>
-<%@ include file="comman/header.jsp"%>
+<%--<%@ include file="sessionchk.jsp"%>--%>
 <%	
 //    session checker
     if((nullconv((String)session.getAttribute("username")).equals("")))
 	{
 	  response.sendRedirect("login.jsp");
 	  return;
-	 }
-    
-	Connection conn=null;
-	conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/briclyn","root","303seminarian");
-	
-	ResultSet rsMyList=null;
-	PreparedStatement psMyList=null;
-	PreparedStatement psCurrency=null;
-	ResultSet rsCurrency=null;
-	
-	PreparedStatement psAppImage=null;
-	ResultSet rsAppImage=null;
-	
-	PreparedStatement psAppImageURL=null;
-	ResultSet rsAppImageURL=null;
-	
-	String sCurrency="";
-	
-	String sSUserID=nullconv((String)session.getAttribute("username"));
-	
-	String sApprovalOptionListImage="";
-	String sURLUploadImage="uLoad.jsp";
-	String sImageURL="";
-	
-	String img=null;
-	int imglen=0;
-	byte [] img_arr=null;
-	
-	try{
-		String sqlAppImage="SELECT cIsImageApprovalNeed FROM list_approval";
-		psAppImage=conn.prepareStatement(sqlAppImage);
-		rsAppImage=psAppImage.executeQuery();
-		if(rsAppImage.next())
-		{
-		  sApprovalOptionListImage=rsAppImage.getString("cIsImageApprovalNeed");
-		}
-	     
-		String sqlAppImageURL="SELECT iLAImageID, iListID, bImage FROM list_album where iListID=? and cStatus='A'";
-		psAppImageURL=conn.prepareStatement(sqlAppImageURL);
-		
-		String sqlMyList="SELECT l.iListID, l.title, l.type, l.propertytype, l.region," 
-		                 +" l.city, l.area, l.address," 
-						 +" l.dCreatedDate,c.iCityName,lc.iLocationName,r.sRegEmail,sFirstName, sLastName,iUserContact "
-						 +"   FROM list_requirement l "
-						 +"    left join citymaster c on c.iCityID=l.iCityID "
-						 +"	   left join locationmaster lc on lc.iLocationID=l.iLocalityID "
-						 +"    left join registration r on r.username=l.username "
-						 +"	   left join propertymaster p on p.iPropertyID=l.iPropertyID "
-						 +"          where l.cStatus='A' and l.username='"+nullconv(sSUserID)+"' order by l.dCreatedDate desc";
-		psMyList=conn.prepareStatement(sqlMyList);
-		rsMyList=psMyList.executeQuery();
-		
-		String sqlCurrency="SELECT sCurrencyName, sSymbol FROM currency b where sStatus='A'";
-		psCurrency=conn.prepareStatement(sqlCurrency);
-		rsCurrency=psCurrency.executeQuery();
-		if(rsCurrency.next())
-		{
-		  sCurrency=rsCurrency.getString("sSymbol");
-		}
-	}
-	catch(Exception e)
-	{
-		e.printStackTrace();
-	}
-%>
+	 }%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -147,13 +82,24 @@
         </script>
     <body>
         <!--dynamic navbar-->
-        <%@include file="menu.jsp"%>
+        <%@include file="navbar.jsp"%>
+        <br>
         <div class="container">
             <div class="row">
-                <div class="large-4 columns">
-                    
+                <div class="large-4 columns" id="profile">
+                    <h2 id="profileheading"><%
+                        String x = session.getAttribute("username").toString();
+                        out.println(x);%> - My Account</h2>
+                    <ul id="sidenav">
+                        <li><a href="myProfile.jsp">My Profile</a></li>
+                        <li><a href="myList.jsp">Listings</a></li>
+                        <li><a href="">Messages</a></li>
+                        <li><a href="">Change Password</a></li>
+                    </ul>
                 </div>
                 <div class="large-8 columns">
+                    <br>
+                    <label class="labels">My List of Property</label>
                     <form name="listForm" action="" method="" onsubmit="return goSubmitForm()">
                         <input type="hidden" name="iPageID" value="My">
                         
@@ -176,33 +122,6 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
-                                <%
-                                    boolean nextRow=false;
-                                    String br="";
-                                    while(rsMyList.next())
-                                    {
-    nextRow=true;
-    String neo=rsMyList.getString("cPriceNegotiable");
-    String trans=rsMyList.getString("iTransactionType");
-    if(neo.equalsIgnoreCase("Y"))
-    {
-     neo="Negotiable";
-    }
-    else
-    {
-     neo="Not Negotiable";
-   }
-   
-   if(trans.equalsIgnoreCase("1"))
-   {
-     trans="for Sale";
-   }
-   else
-   {
-     trans="for Rent";
-   }
-   int iListID=rsMyList.getInt("iListID"); 
-  %>
                             </tbody>
                         </table>
                     </form>
