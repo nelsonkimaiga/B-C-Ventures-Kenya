@@ -13,7 +13,10 @@
 	{
 	  response.sendRedirect("login.jsp");
 	  return;
-	 }%>
+	 }
+
+
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -111,7 +114,7 @@
                                     <th width="200">Specification</th>
                                     <th width="150">Price</th>
                                     <th width="150">Contact</th>
-                                </tr>
+                                </tr>  
                             </thead>
                             <tbody>
                                 <tr>
@@ -120,6 +123,9 @@
                                     <td></td>
                                     <td</td>
                                     <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td></td>
                                 </tr>
                             </tbody>
